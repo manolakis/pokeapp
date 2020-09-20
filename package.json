@@ -1,0 +1,98 @@
+{
+  "name": "@pokeapp/root",
+  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Manuel Martin <manuel.martin@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manolakis/pokeapp.git"
+  },
+  "homepage": "https://github.com/manolakis/pokeapp",
+  "bugs": {
+    "url": "https://github.com/manolakis/pokeapp/issues"
+  },
+  "workspaces": [
+    "packages/application",
+    "packages/features/*"
+  ],
+  "devDependencies": {
+    "@changesets/cli": "^2.10.2",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@open-wc/demoing-storybook": "^2.0.2",
+    "@open-wc/eslint-config": "^3.0.0",
+    "@open-wc/testing": "^2.3.9",
+    "@open-wc/testing-helpers": "^1.8.9",
+    "@storybook/addon-a11y": "^6.0.21",
+    "@web/dev-server": "^0.0.10",
+    "@web/test-runner": "^0.7.24",
+    "@web/test-runner-playwright": "^0.5.6",
+    "@webcomponents/webcomponentsjs": "^2.4.0",
+    "babel-eslint": "^10.0.3",
+    "babel-polyfill": "^6.26.0",
+    "eclint": "^2.8.1",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-wc": "^1.2.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "markdownlint-cli": "^0.23.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.1",
+    "prettier-package-json": "^2.1.3",
+    "sinon": "^9.0.3",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "scripts": {
+    "debug": "web-test-runner \"packages/**/*.test.js\" --watch",
+    "dev-server": "web-dev-server",
+    "format": "npm run format:eslint && npm run format:prettier",
+    "format:eslint": "eslint --ext .js,.html . --fix",
+    "format:prettier": "prettier \"**/*.{js,md}\" --write",
+    "lint": "run-p lint:*",
+    "lint:eclint": "git ls-files | xargs eclint check",
+    "lint:eslint": "eslint --ext .js,.html .",
+    "lint:markdownlint": "git ls-files '*.md' | xargs markdownlint --ignore '{.changeset/*.md,**/CHANGELOG.md}'",
+    "lint:prettier": "prettier \"**/*.js\" --list-different || (echo '↑↑ these files are not prettier formatted ↑↑' && exit 1)",
+    "release": "changeset publish",
+    "start": "npm run storybook",
+    "storybook": "start-storybook -p 9001 -s ./dev-assets",
+    "storybook:build": "NODE_OPTIONS='--max-old-space-size=8192' build-storybook",
+    "storybook:build:start": "npm run storybook:build && web-dev-server --root-dir storybook-static --open",
+    "test": "run-p test:browser",
+    "test:browser": "web-test-runner \"packages/**/!(node_modules)/**/*.test.js\" --coverage",
+    "test:browser:all": "web-test-runner \"packages/**/!(node_modules)/**/*.test.js\" --playwright --browsers webkit chromium firefox --coverage",
+    "test:browser:watch": "web-test-runner \"packages/**/!(node_modules)/**/*.test.js\" --watch"
+  },
+  "keywords": [
+    "pokemon",
+    "pokeapp",
+    "web",
+    "components",
+    "webcomponents"
+  ],
+  "lint-staged": {
+    "*": [
+      "eclint fix",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.md": [
+      "prettier --write",
+      "markdownlint --ignore '{.changeset/*.md,**/CHANGELOG.md}'",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "trailingComma": "all"
+  }
+}
