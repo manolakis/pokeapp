@@ -1,0 +1,27 @@
+{
+  "name": "@pokeapp/app",
+  "description": "Pokemon Sample Application",
+  "license": "MIT",
+  "version": "0.1.0",
+  "author": "Manuel Martin <manuel.martin@gmail.com>",
+  "main": "index.js",
+  "module": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manolakis/pokeapp.git",
+    "directory": "packages/application"
+  },
+  "files": [
+    "*.js",
+    "assets",
+    "src"
+  ],
+  "dependencies": {
+    "@vaadin/router": "^1.7.2",
+    "chi-wc": "^0.6.0"
+  },
+  "devDependencies": {
+    "@open-wc/testing": "^2.5.26",
+    "sinon": "^9.0.3"
+  }
+}

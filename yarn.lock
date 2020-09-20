@@ -869,6 +869,16 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@bundled-es-modules/axios@0.18.1":
+  version "0.18.1"
+  resolved "https://registry.yarnpkg.com/@bundled-es-modules/axios/-/axios-0.18.1.tgz#8beedbc92e9b0ed7df7c6cbdc6dfce84d306d80b"
+  integrity sha512-7c389uGe0dmfdedi9PQ3Om4vKg1HFzm/IntaqZ4FbXOo+gNiiPIM4He8MIkuRpgqUitbm1km0jOQ8p+tSpUp4Q==
+
+"@bundled-es-modules/message-format@6.0.4":
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/@bundled-es-modules/message-format/-/message-format-6.0.4.tgz#232da6877adb960f6c8f598c72588a84352de147"
+  integrity sha512-NGUoPxqsBzDwvRhY3A3L/AhS1hzS9OWappfyDOyCwE7G3W4ua28gau7QwvJz7QzA6ArbAdeb8c1mLjvd1WUFAA==
+
 "@changesets/apply-release-plan@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@changesets/apply-release-plan/-/apply-release-plan-4.0.0.tgz#e78efb56a4e459a8dab814ba43045f2ace0f27c9"
@@ -1317,6 +1327,83 @@
   dependencies:
     vary "^1.1.2"
 
+"@lion/ajax@^0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@lion/ajax/-/ajax-0.5.4.tgz#54cb1fb54d2a8283764c7e269d99046e7695e5f5"
+  integrity sha512-MrHqinJrsukbmoqkANQxRD/Tu8Z92Sl6d2hRt7/A6oJC4MemXwpnX6U0fONXrAqmC0z/kwfGAQMdQzXaHIahYA==
+  dependencies:
+    "@bundled-es-modules/axios" "0.18.1"
+    "@lion/core" "0.12.0"
+    singleton-manager "1.1.2"
+
+"@lion/button@^0.7.13":
+  version "0.7.13"
+  resolved "https://registry.yarnpkg.com/@lion/button/-/button-0.7.13.tgz#cc8d5dc57e552adcb7eb152373533b14f77dbd58"
+  integrity sha512-+VHuo6B695XEKFVClUddRW2nkOQ7/8HnhQuLOkje6o16R150DABpKONUqvaaLr+WIKUn97pczPHKKaa15es0GQ==
+  dependencies:
+    "@lion/core" "0.12.0"
+
+"@lion/core@0.12.0", "@lion/core@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@lion/core/-/core-0.12.0.tgz#b2ceb84fb38470a7c4171324726c8b14bf6ffe0c"
+  integrity sha512-Pa+Xnr+nrD8BLdZqJXcNCkYn4KO76K3SFd6kKz6SzCKXfpHCd9pm1kMCGoAJBs2d5bMONgn8zkqFiVPHmLw/fQ==
+  dependencies:
+    "@open-wc/dedupe-mixin" "^1.2.18"
+    "@open-wc/scoped-elements" "^1.2.2"
+    lit-element "~2.4.0"
+    lit-html "^1.3.0"
+
+"@lion/form-core@0.6.1", "@lion/form-core@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@lion/form-core/-/form-core-0.6.1.tgz#79f4647087be5a0f59547c16591023b5462062e5"
+  integrity sha512-4FYuuGyfGwwKtwGrbnzbdm2e4mn1yKB5dFgLD8g9d3w7l5yQK/zYLVUloxd+rFSh7iuSsmCuxr+v6yX5/ids1w==
+  dependencies:
+    "@lion/core" "0.12.0"
+    "@lion/localize" "0.14.4"
+
+"@lion/icon@^0.7.4":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@lion/icon/-/icon-0.7.4.tgz#eabad66b070c2c7f8d06707548aba7787fb88729"
+  integrity sha512-6PfF+Z8xxiz34dSD735whJraDebRcjZ+aFh7F4aQuuUieKb6Uy+iHH+A0pPDCdUPafudew/IRNUawVhjNYW+0g==
+  dependencies:
+    "@lion/core" "0.12.0"
+    singleton-manager "1.1.2"
+
+"@lion/input@^0.9.2":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@lion/input/-/input-0.9.2.tgz#f4e2a7ac70802e88cf8a65d0b6834d792f395f01"
+  integrity sha512-1AiyEF1KDrfUHVolKZA2rCgNsJyWetl+O8MToIq/d9mp3TjLRnpEqRvA01cbAZ6JuzVVdfLVzAMuZzsA0kI5LQ==
+  dependencies:
+    "@lion/core" "0.12.0"
+    "@lion/form-core" "0.6.1"
+
+"@lion/localize@0.14.4", "@lion/localize@^0.14.4":
+  version "0.14.4"
+  resolved "https://registry.yarnpkg.com/@lion/localize/-/localize-0.14.4.tgz#3ecfc0fff82cf373a5a4e37df3f8d88c75bf96f0"
+  integrity sha512-2o9VAOkorF5sRBPpHkQYjSsh1owS6jtK0BZ0rcOXVBZR/jpYVm9wb71fA9EYfXYBxPOPvHG+Xwj0p0mjV68jkg==
+  dependencies:
+    "@bundled-es-modules/message-format" "6.0.4"
+    "@lion/core" "0.12.0"
+    singleton-manager "1.1.2"
+
+"@lion/overlays@^0.19.0":
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/@lion/overlays/-/overlays-0.19.0.tgz#649a000d7a9da4f399fc1968d1cdf75a9cfdd888"
+  integrity sha512-/ev8r/YT0ReF0+NaEM1x52DgzzuI0Bf45V6lz+eICCdEnJe8Xc04RAd3N9Wgwc7WeTJePDKY5mHP8opHydfFlA==
+  dependencies:
+    "@lion/core" "0.12.0"
+    popper.js "^1.15.0"
+    singleton-manager "1.1.2"
+
+"@lion/validate-messages@^0.2.15":
+  version "0.2.15"
+  resolved "https://registry.yarnpkg.com/@lion/validate-messages/-/validate-messages-0.2.15.tgz#2a779d0ff5a97c272ae6280caf854fd0eb843301"
+  integrity sha512-jhK0YGGMyh5w/55znf9OU+3sLBdWxq5cfRnUI316z2O1TkkuMTg75QZoHDFUk7LBQwiHwKUR//fs1FPSAGxmQA==
+  dependencies:
+    "@lion/core" "0.12.0"
+    "@lion/form-core" "0.6.1"
+    "@lion/localize" "0.14.4"
+
 "@manypkg/find-root@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@manypkg/find-root/-/find-root-1.1.0.tgz#a62d8ed1cd7e7d4c11d9d52a8397460b5d4ad29f"
@@ -1494,7 +1581,7 @@
     "@open-wc/semantic-dom-diff" "^0.13.16"
     "@types/chai" "^4.1.7"
 
-"@open-wc/dedupe-mixin@^1.3.0":
+"@open-wc/dedupe-mixin@^1.2.18", "@open-wc/dedupe-mixin@^1.3.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@open-wc/dedupe-mixin/-/dedupe-mixin-1.3.0.tgz#0df5d438285fc3482838786ee81895318f0ff778"
   integrity sha512-UfdK1MPnR6T7f3svzzYBfu3qBkkZ/KsPhcpc3JYhsUY4hbpwNF9wEQtD4Z+/mRqMTJrKg++YSxIxE0FBhY3RIw==
@@ -1597,7 +1684,7 @@
     lit-element "^2.2.1"
     lit-html "^1.0.0"
 
-"@open-wc/testing@^2.3.9":
+"@open-wc/testing@^2.3.9", "@open-wc/testing@^2.5.26":
   version "2.5.26"
   resolved "https://registry.yarnpkg.com/@open-wc/testing/-/testing-2.5.26.tgz#59a5e6c7b43e5a2880ea938b7e1f657d2feffe79"
   integrity sha512-HvetsOjdRFXLSkLdzOjW6IzI5h2IiR1dqIy+9DkpzoJWoNgpdZFNQYN6ScD6zxs4NQtCebQEB4RMakjOsGXmFA==
@@ -2395,6 +2482,26 @@
   integrity sha512-A1b8SU4D10uoPjwb0lnHmmu8wZhR9d+9o2PKBQT2jU5YPTKsxac6M2qGAdY7VcL+dHHhARVUDmeg0rOrcd9EjA==
   dependencies:
     "@types/node" "*"
+
+"@vaadin/router@^1.7.2":
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@vaadin/router/-/router-1.7.2.tgz#ba2fcd7bc522f1319e6d853e430e384820dcfa09"
+  integrity sha512-Jcfd85W46k/kq1/1DtQEz7J3poZ+5gArfOYUMbNvPTpiYSvI7egXTIolkU0dvkpxWuSSAIj1RTIbzIqyIfPepA==
+  dependencies:
+    "@vaadin/vaadin-usage-statistics" "^2.1.0"
+    path-to-regexp "2.4.0"
+
+"@vaadin/vaadin-development-mode-detector@^2.0.0":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@vaadin/vaadin-development-mode-detector/-/vaadin-development-mode-detector-2.0.4.tgz#f49c8009856bead92d248377c36b295b5aae78e5"
+  integrity sha512-S+PaFrZpK8uBIOnIHxjntTrgumd5ztuCnZww96ydGKXgo9whXfZsbMwDuD/102a/IuPUMyF+dh/n3PbWzJ6igA==
+
+"@vaadin/vaadin-usage-statistics@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@vaadin/vaadin-usage-statistics/-/vaadin-usage-statistics-2.1.0.tgz#9c0fd71dded80f401bcdfbcb3f45b5640fc4256d"
+  integrity sha512-e81nbqY5zsaYhLJuOVkJkB/Um1pGK5POIqIlTNhUfjeoyGaJ63tiX8+D5n6F+GgVxUTLUarsKa6SKRcQel0AzA==
+  dependencies:
+    "@vaadin/vaadin-development-mode-detector" "^2.0.0"
 
 "@web/browser-logs@^0.1.2":
   version "0.1.3"
@@ -3384,6 +3491,22 @@ checkstyle-formatter@^1.1.0:
   integrity sha1-HEki26xy1nJCz7hedwaRfVWHtRI=
   dependencies:
     xml-escape "^1.0.0"
+
+chi-wc@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/chi-wc/-/chi-wc-0.6.0.tgz#98c2a522fc5626967db6ee9f9a9f5567c4ba608f"
+  integrity sha512-OScRhtKpH8w+2P3sf34Y8yM+fpD6f5tLRMLLSSSVeUM0fb1SRZ6GBrFNL8Gh8d+C0JfFuiuuUe+7GThsOVcJMQ==
+  dependencies:
+    "@lion/ajax" "^0.5.4"
+    "@lion/button" "^0.7.13"
+    "@lion/core" "^0.12.0"
+    "@lion/form-core" "^0.6.1"
+    "@lion/icon" "^0.7.4"
+    "@lion/input" "^0.9.2"
+    "@lion/localize" "^0.14.4"
+    "@lion/overlays" "^0.19.0"
+    "@lion/validate-messages" "^0.2.15"
+    singleton-manager "^1.1.2"
 
 chokidar@^3.0.0, chokidar@^3.4.0:
   version "3.4.2"
@@ -6359,14 +6482,14 @@ listr2@^2.6.0:
     rxjs "^6.6.2"
     through "^2.3.8"
 
-lit-element@^2.2.1, lit-element@^2.3.1:
+lit-element@^2.2.1, lit-element@^2.3.1, lit-element@~2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-2.4.0.tgz#b22607a037a8fc08f5a80736dddf7f3f5d401452"
   integrity sha512-pBGLglxyhq/Prk2H91nA0KByq/hx/wssJBQFiYqXhGDvEnY31PRGYf1RglVzyLeRysu0IHm2K0P196uLLWmwFg==
   dependencies:
     lit-html "^1.1.1"
 
-lit-html@^1.0.0, lit-html@^1.1.1, lit-html@^1.2.1:
+lit-html@^1.0.0, lit-html@^1.1.1, lit-html@^1.2.1, lit-html@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-1.3.0.tgz#c80f3cc5793a6dea6c07172be90a70ab20e56034"
   integrity sha512-0Q1bwmaFH9O14vycPHw8C/IeHMk/uSDldVLIefu/kfbTBGIc44KGH6A8p1bDfxUfHdc8q6Ct7kQklWoHgr4t1Q==
@@ -7564,6 +7687,11 @@ path-parse@^1.0.6:
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
   integrity sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==
 
+path-to-regexp@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-2.4.0.tgz#35ce7f333d5616f1c1e1bfe266c3aba2e5b2e704"
+  integrity sha512-G6zHoVqC6GGTQkZwF4lkuEyMbVOjoBKAEybQUypI1WTkqinCOrq2x6U2+phkJ1XsEMTy4LjtwPI7HW+NVrRR2w==
+
 path-to-regexp@^1.7.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-1.8.0.tgz#887b3ba9d84393e87a0a0b9f4cb756198b53548a"
@@ -7738,7 +7866,7 @@ polyfills-loader@^1.7.1:
     terser "^4.6.7"
     whatwg-fetch "^3.0.0"
 
-popper.js@^1.14.4, popper.js@^1.14.7:
+popper.js@^1.14.4, popper.js@^1.14.7, popper.js@^1.15.0:
   version "1.16.1"
   resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
   integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
@@ -8744,6 +8872,11 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
+
+singleton-manager@1.1.2, singleton-manager@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/singleton-manager/-/singleton-manager-1.1.2.tgz#35c90b9f86012e4bc3342183a39fae27e8f05f24"
+  integrity sha512-U1nD22iUUVSWY7ST5iB0ca+qFZcXwtP6nf8Gp0WP/u4gqOs83gdOsOS6d4glhvcJ751ERJfDbaMoqDA0pPk+yA==
 
 sinon-chai@^3.3.0:
   version "3.5.0"
