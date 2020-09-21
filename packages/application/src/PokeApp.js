@@ -23,7 +23,14 @@ export class PokeApp extends LocalizeMixin(LitElement) {
     return [
       ...super.localizeNamespaces,
       {
-        [MSG_SCOPE]: locale => import(`../assets/translations/${locale}.js`),
+        [MSG_SCOPE]: locale => {
+          switch (locale) {
+            case 'es-ES':
+              return import(`../assets/translations/es-ES.js`);
+            default:
+              return import(`../assets/translations/en-GB.js`);
+          }
+        },
       },
     ];
   }
