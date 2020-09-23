@@ -14,7 +14,8 @@
   },
   "workspaces": [
     "packages/application",
-    "packages/features/*"
+    "packages/features/*",
+    "packages/common"
   ],
   "devDependencies": {
     "@changesets/cli": "^2.10.2",
@@ -63,7 +64,7 @@
     "test": "run-p test:browser",
     "test:browser": "web-test-runner --node-resolve \"packages/**/!(node_modules)/**/*.test.js\" --coverage",
     "test:browser:all": "web-test-runner --node-resolve \"packages/**/!(node_modules)/**/*.test.js\" --playwright --browsers webkit chromium firefox --coverage",
-    "test:browser:watch": "web-test-runner \"packages/**/!(node_modules)/**/*.test.js\" --watch"
+    "test:browser:watch": "web-test-runner --node-resolve \"packages/**/!(node_modules)/**/*.test.js\" --watch"
   },
   "keywords": [
     "pokemon",
