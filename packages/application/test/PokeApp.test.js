@@ -17,7 +17,7 @@ describe('PokeApp', () => {
   });
 
   it('should be accessible', async () => {
-    const $el = await fixture(html`<pokemon-app></pokemon-app>`);
+    const $el = await fixture(html` <pokemon-app></pokemon-app> `);
 
     expect($el).to.be.accessible();
   });

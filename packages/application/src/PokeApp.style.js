@@ -6,9 +6,7 @@ import {
 
 // language=CSS
 export const pokeAppStyle = css`
-  ${boxSizingGenerator(':host', '*')}
-
-  :host {
+  ${boxSizingGenerator(':host', '*')} :host {
     display: block;
     width: 100%;
     height: 100%;

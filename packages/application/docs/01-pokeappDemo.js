@@ -11,7 +11,4 @@ addStylesToDocumentHeader(css`
   }
 `);
 
-export const renderPokeApp = () =>
-  html`
-    <pokemon-app class="app"></pokemon-app>
-  `;
+export const renderPokeApp = () => html` <pokemon-app class="app"></pokemon-app> `;
