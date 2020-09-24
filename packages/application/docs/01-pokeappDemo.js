@@ -1,29 +1,17 @@
 import { html, css } from 'chi-wc';
 import { PokeApp } from '../src/PokeApp.js';
+import { addStylesToDocumentHeader } from '../../helpers/addStylesToDocumentHeader.js';
 
 customElements.define('pokemon-app', PokeApp);
 
-const addGlobalStyles = styles => {
-  const styleTag = document.createElement('style');
-
-  styleTag.textContent = styles.cssText;
-
-  document.head.appendChild(styleTag);
-};
-
-addGlobalStyles(css`
-  html,
-  body {
+addStylesToDocumentHeader(css`
+  #story--pokeapp-details--pokeapp {
     position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-  .app {
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 800px;
   }
 `);
 
-export const renderPokeApp = () => html`<pokemon-app class="app"></pokemon-app>`;
+export const renderPokeApp = () =>
+  html`
+    <pokemon-app class="app"></pokemon-app>
+  `;
