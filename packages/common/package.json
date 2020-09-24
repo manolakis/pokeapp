@@ -1,0 +1,26 @@
+{
+  "name": "@pokeapp/common",
+  "description": "Pokemon Sample Application Common Elements",
+  "license": "MIT",
+  "version": "0.0.0",
+  "author": "Manuel Martin <manuel.martin@gmail.com>",
+  "main": "index.js",
+  "module": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manolakis/pokeapp.git",
+    "directory": "packages/common"
+  },
+  "files": [
+    "*.js",
+    "assets",
+    "src"
+  ],
+  "dependencies": {
+    "chi-wc": "^0.6.0"
+  },
+  "devDependencies": {
+    "@open-wc/testing": "^2.5.26",
+    "sinon": "^9.0.3"
+  }
+}
