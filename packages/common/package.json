@@ -2,7 +2,7 @@
   "name": "@pokeapp/common",
   "description": "Pokemon Sample Application Common Elements",
   "license": "MIT",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Manuel Martin <manuel.martin@gmail.com>",
   "main": "index.js",
   "module": "index.js",
