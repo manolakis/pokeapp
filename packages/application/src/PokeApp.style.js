@@ -45,6 +45,7 @@ export const pokeAppStyle = css`
     .pokeapp__header,
     .pokeapp__content {
       width: 1200px;
+      max-width: 100%;
     }
   `)}
 `;
