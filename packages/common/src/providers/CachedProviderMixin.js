@@ -1,11 +1,16 @@
 import { dedupeMixin } from 'chi-wc';
 
 /**
- * @typedef {import('axios').AxiosRequestConfig} AxiosRequestConfig
- * @typedef {import('axios').AxiosResponse} AxiosResponse
+ * @typedef {import('../../types/CachedProviderMixinTypes').CachedProviderMixin} CachedProviderMixin
  */
 
-const getKey = ({ url, params = {} } = {}) => {
+/**
+ * Obtains the cache key
+ * @param {string} url
+ * @param {object<string, *>>}params
+ * @return {string}
+ */
+const getCacheKey = ({ url, params = {} } = {}) => {
   const search = new URLSearchParams();
 
   for (const [key, value] of Object.entries(params)) {
@@ -15,44 +20,38 @@ const getKey = ({ url, params = {} } = {}) => {
   return `${url}${search.toString()}`;
 };
 
+/**
+ * CachedProviderMixin - To allow cache in provider requests
+ * @type {CachedProviderMixin}
+ */
 const CachedProviderImplementation = superclass =>
   class CachedProvider extends superclass {
     constructor(config) {
       super(config);
 
-      /** @type {Map<string, AxiosResponse>} */
-      this.cache = new Map();
+      this.__cache = new Map();
     }
 
-    /** @override */
     request(config) {
       const { method } = config;
 
       return method.toLowerCase() === 'get' ? this.__cachedRequest(config) : super.request(config);
     }
 
-    /**
-     * Returns a cached query or executes and caches it for future references.
-     * @param {AxiosRequestConfig} config
-     * @return {AxiosResponse}
-     * @private
-     */
     __cachedRequest(config) {
-      const key = getKey(config);
+      const key = getCacheKey(config);
 
-      if (!this.cache.has(key)) {
-        this.cache.set(key, super.request(config));
+      if (!this.__cache.has(key)) {
+        this.__cache.set(key, super.request(config));
       }
 
-      return this.cache.get(key);
+      return this.__cache.get(key);
     }
 
-    /**
-     * Invalidates the current cache.
-     */
     invalidateCache() {
-      this.cache.clear();
+      this.__cache.clear();
     }
   };
 
+/** @type {CachedProviderMixin} */
 export const CachedProviderMixin = dedupeMixin(CachedProviderImplementation);
