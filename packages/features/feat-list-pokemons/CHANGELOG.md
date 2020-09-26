@@ -1,5 +1,11 @@
 # @pokeapp/feat-list-pokemons
 
+## 0.3.1
+
+### Patch Changes
+
+- 273df78: Replace replaceAll by replace to have major browser compatibility
+
 ## 0.3.0
 
 ### Minor Changes
