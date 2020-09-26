@@ -11,7 +11,7 @@ import 'chi-wc/chi-icon.js';
  * @param {string} name
  * @return {string}
  */
-const dashesToSpaces = name => name.replaceAll('-', ' ');
+const dashesToSpaces = name => name.replace(/-/g, ' ');
 
 export class PokemonCard extends LocalizeMixin(LitElement) {
   /** @override */
