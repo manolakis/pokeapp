@@ -60,7 +60,7 @@ export class FeatListPokemons extends LocalizeMixin(LitElement) {
           label="${this.msgLit(`${namespace}:search.label`)}"
           placeholder="${this.msgLit(`${namespace}:search.placeholder`)}"
           @model-value-changed=${({ target }) => {
-            this.search = target.modelValue.replaceAll('-', ' ');
+            this.search = target.modelValue.replace(/-/g, ' ');
           }}
         ></chi-input>
       </div>
