@@ -1,5 +1,16 @@
 # @pokeapp/feat-list-pokemons
 
+## 0.3.0
+
+### Minor Changes
+
+- d27e0d3: Add Pokemon Card
+
+### Patch Changes
+
+- Updated dependencies [d27e0d3]
+  - @pokeapp/common@0.2.0
+
 ## 0.2.0
 
 ### Minor Changes
