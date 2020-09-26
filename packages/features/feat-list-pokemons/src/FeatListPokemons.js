@@ -1,13 +1,12 @@
-import { LitElement, LocalizeMixin, html, nothing } from 'chi-wc';
+import { html, LitElement, LocalizeMixin, nothing } from 'chi-wc';
 
 import { featListPokemonStyle } from './FeatListPokemons.style.js';
-import { getPokemonsAction } from './actions/getPokemonsAction.js';
+import { getPokemonNamesAction } from './actions/getPokemonNamesAction.js';
+import { namespace } from './namespace.js';
 
 import 'chi-wc/chi-button.js';
 import 'chi-wc/chi-input.js';
-
-/** i18n namespace */
-const namespace = 'feat-list-pokemon';
+import './components/pokemon-card.js';
 
 export class FeatListPokemons extends LocalizeMixin(LitElement) {
   /** @override */
@@ -18,8 +17,8 @@ export class FeatListPokemons extends LocalizeMixin(LitElement) {
   /** @override */
   static get properties() {
     return {
-      filter: { type: String },
-      pokemons: { type: Array },
+      search: { type: String },
+      pokemonNames: { type: Array },
     };
   }
 
@@ -43,12 +42,13 @@ export class FeatListPokemons extends LocalizeMixin(LitElement) {
   constructor() {
     super();
 
-    this.filter = '';
-    this.pokemonsLoading = this._startLoadingPokemons();
+    this.search = '';
+    this.pokemonNamesLoading = this._startLoadingPokemonNames();
   }
 
-  async _startLoadingPokemons() {
-    this.pokemons = await getPokemonsAction();
+  /** Start loading the pokemon list */
+  async _startLoadingPokemonNames() {
+    this.pokemonNames = await getPokemonNamesAction();
   }
 
   /** @override */
@@ -56,17 +56,25 @@ export class FeatListPokemons extends LocalizeMixin(LitElement) {
     return html`
       <div>
         <chi-input
-          placeholder="${this.msgLit(`${namespace}:placeholder`)}"
+          data-id="search"
+          label="${this.msgLit(`${namespace}:search.label`)}"
+          placeholder="${this.msgLit(`${namespace}:search.placeholder`)}"
           @model-value-changed=${({ target }) => {
-            this.filter = target.modelValue;
+            this.search = target.modelValue.replaceAll('-', ' ');
           }}
         ></chi-input>
       </div>
       <ul class="pokemon-list">
-        ${this.pokemons && this.filter.length >= 3
-          ? this.pokemons
-              .filter(({ name }) => name.indexOf(this.filter) !== -1)
-              .map(pokemon => html` <li>${pokemon.name}</li> `)
+        ${this.pokemonNames && this.search.length >= 3
+          ? this.pokemonNames
+              .filter(name =>
+                this.search
+                  .split(/\s/)
+                  .reduce((acc, part) => acc && name.indexOf(part) !== -1, true),
+              )
+              .map(
+                pokemonName => html` <li><pokemon-card name="${pokemonName}"></pokemon-card></li> `,
+              )
           : nothing}
       </ul>
     `;
