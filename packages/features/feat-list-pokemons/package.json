@@ -2,7 +2,7 @@
   "name": "@pokeapp/feat-list-pokemons",
   "description": "Pokemon Sample Application - Feat List Pokemons",
   "license": "MIT",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Manuel Martin <manuel.martin@gmail.com>",
   "main": "index.js",
   "module": "index.js",
@@ -17,7 +17,7 @@
     "src"
   ],
   "dependencies": {
-    "@pokeapp/common": "0.1.0",
+    "@pokeapp/common": "0.2.0",
     "chi-wc": "^0.6.0",
     "singleton-manager": "^1.1.2"
   },
