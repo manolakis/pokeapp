@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@open-wc/testing": "^2.5.26",
+    "@web/test-runner-mocha": "^0.3.6",
     "sinon": "^9.0.3"
   }
 }

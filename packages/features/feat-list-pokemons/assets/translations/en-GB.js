@@ -1,3 +1,7 @@
 export default {
-  placeholder: 'Filter by name',
+  imageAlt: '{name} image',
+  search: {
+    label: 'Search',
+    placeholder: 'Search by name',
+  },
 };

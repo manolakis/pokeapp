@@ -17,6 +17,7 @@
     "src"
   ],
   "dependencies": {
+    "@pokeapp/common": "0.1.0",
     "@vaadin/router": "^1.7.2",
     "chi-wc": "^0.6.0"
   },

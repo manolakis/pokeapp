@@ -2,33 +2,44 @@ import { singletonManager } from 'singleton-manager';
 import { DataProvider } from '@pokeapp/common';
 
 /**
- * @interface PokemonProvider
- */
-
-/**
- * Gets the pokemon list.
- *
- * @function
- * @name PokemonProvider#getPokemons
- * @returns {Promise<any>} An array with a pokemon descriptor
+ * @typedef {import('@pokeapp/common').Pokemon} Pokemon
+ * @typedef {import('@pokeapp/common/types/PokeAPI').NamedAPIResourceList} PokemonListAPI
+ * @typedef {import('@pokeapp/common/types/PokeAPI').Pokemon} PokemonAPI
+ * @typedef {import('../../types/PokemonProvider').PokemonProvider} PokemonProvider
  */
 
 /**
  * @implements PokemonProvider
  */
-class PokemonProviderImpl extends DataProvider {
+class PokemonProviderImpl {
   constructor() {
-    super({
+    this.__provider = new DataProvider({
       baseURL: 'https://pokeapi.co/api/v2',
     });
   }
 
-  async getPokemons(options) {
-    return this.request({
+  async getPokemonNames() {
+    const { /** @type {PokemonListAPI} */ data } = await this.__provider.request({
       method: 'get',
       url: '/pokemon',
-      ...options,
+      params: {
+        limit: 1500,
+      },
     });
+
+    return data.results.map(({ name }) => name);
+  }
+
+  async getPokemon(name) {
+    const { /** @type {PokemonAPI}  */ data } = await this.__provider.request({
+      method: 'get',
+      url: `/pokemon/${name}`,
+    });
+
+    return /** @type {Pokemon} */ {
+      name: data.name,
+      sprite: data.sprites.other?.dream_world?.front_default || data.sprites.front_default,
+    };
   }
 }
 

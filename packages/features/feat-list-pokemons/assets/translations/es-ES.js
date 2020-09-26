@@ -1,3 +1,7 @@
 export default {
-  placeholder: 'Filtrar por nombre',
+  imageAlt: 'Imagen de {name}',
+  search: {
+    label: 'Buscar',
+    placeholder: 'Buscar por nombre',
+  },
 };

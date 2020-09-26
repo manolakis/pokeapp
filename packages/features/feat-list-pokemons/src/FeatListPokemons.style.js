@@ -1,19 +1,22 @@
-import { css, boxSizingGenerator, rem } from 'chi-wc';
+import { css, rem } from 'chi-wc';
+import { boxSizingStyle } from '@pokeapp/common';
 
 // language=CSS
-export const featListPokemonStyle = css`
-  ${boxSizingGenerator(':host', '*')}
+export const featListPokemonStyle = [
+  boxSizingStyle,
+  css`
+    .pokemon-list {
+      list-style: none;
+      margin: ${rem[16]} -0.5rem;
+      padding: 0;
+      display: grid;
+      /*grid-template-columns: repeat(auto-fit, 166px);*/
+      grid-template-columns: repeat(auto-fill, minmax(156px, 1fr));
+      justify-content: space-between;
+    }
 
-  .pokemon-list {
-    list-style: none;
-    margin: ${rem[16]} 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 150px);
-    justify-content: space-between;
-  }
-
-  .pokemon-list > * {
-    width: 150px;
-  }
-`;
+    .pokemon-list > li {
+      padding: ${rem[8]};
+    }
+  `,
+];
