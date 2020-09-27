@@ -22,7 +22,6 @@ export const pokeAppStyle = [
       flex-direction: column;
       align-items: center;
       justify-content: start;
-      height: 100%;
       background-color: ${tokenColorBackgroundBaseDark};
     }
     .pokeapp__header,
@@ -32,16 +31,18 @@ export const pokeAppStyle = [
 
     .pokeapp__header {
       z-index: 1;
+      --color-background-base: #ef5350;
     }
 
     .pokeapp__content {
       background-color: ${tokenColorBackgroundBase};
       flex: 1;
+      padding: 0.5rem;
     }
 
-    .pokeball {
-      height: 3rem;
-      width: 3rem;
+    .logo {
+      height: 2.5rem;
+      margin-top: 0.5rem;
     }
 
     ${desktopGenerator(css`
