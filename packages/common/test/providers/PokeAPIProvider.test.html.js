@@ -1,11 +1,11 @@
 import { expect } from '@open-wc/testing';
-import { stub } from '@pokeapp/common';
 import sinon from 'sinon';
 
-import { getPokemonProvider } from '../../src/providers/PokemonProvider.js';
+import { stub } from './mocks/DataProvider.js';
+import { PokeAPIProvider } from '../../src/providers/PokeAPIProvider.js';
 import pikachuData from './pikachu.js';
 
-describe('PokemonProvider', () => {
+describe('PokeAPIProvider', () => {
   let sandbox;
 
   beforeEach(() => {
@@ -18,7 +18,7 @@ describe('PokemonProvider', () => {
 
   describe('getPokemonNames', () => {
     it('should return a list of Pokemon names', async () => {
-      const provider = getPokemonProvider();
+      const provider = new PokeAPIProvider();
       stub.callsFake(() => ({
         data: {
           results: [
@@ -38,7 +38,7 @@ describe('PokemonProvider', () => {
 
   describe('getPokemon', () => {
     it('should return a Pokemon detail', async () => {
-      const provider = getPokemonProvider();
+      const provider = new PokeAPIProvider();
       stub.callsFake(() => ({ data: pikachuData }));
 
       const pokemon = await provider.getPokemon('pikachu');

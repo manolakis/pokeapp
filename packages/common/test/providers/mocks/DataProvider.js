@@ -1,7 +1,5 @@
 import sinon from 'sinon';
 
-console.log('mock loaded!');
-
 export const stub = sinon.stub();
 
 export class DataProvider {
