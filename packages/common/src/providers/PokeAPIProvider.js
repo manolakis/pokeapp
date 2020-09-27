@@ -21,7 +21,8 @@ export class PokeAPIProvider {
    * @return {Promise<string[]>}
    */
   async getPokemonNames() {
-    const { /** @type {PokemonListAPI} */ data } = await this.__provider.request({
+    /** @type {PokemonListAPI} */
+    const data = await this.__provider.request({
       method: 'get',
       url: '/pokemon',
       params: {
@@ -38,7 +39,8 @@ export class PokeAPIProvider {
    * @return {Promise<{name: string, sprite: string}>}
    */
   async getPokemon(name) {
-    const { /** @type {PokemonAPI}  */ data } = await this.__provider.request({
+    /** @type {PokemonAPI}  */
+    const data = await this.__provider.request({
       method: 'get',
       url: `/pokemon/${name}`,
     });
