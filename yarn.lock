@@ -869,11 +869,6 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@bundled-es-modules/axios@0.18.1":
-  version "0.18.1"
-  resolved "https://registry.yarnpkg.com/@bundled-es-modules/axios/-/axios-0.18.1.tgz#8beedbc92e9b0ed7df7c6cbdc6dfce84d306d80b"
-  integrity sha512-7c389uGe0dmfdedi9PQ3Om4vKg1HFzm/IntaqZ4FbXOo+gNiiPIM4He8MIkuRpgqUitbm1km0jOQ8p+tSpUp4Q==
-
 "@bundled-es-modules/message-format@6.0.4":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@bundled-es-modules/message-format/-/message-format-6.0.4.tgz#232da6877adb960f6c8f598c72588a84352de147"
@@ -1331,15 +1326,6 @@
   integrity sha512-7ulRC1da/rBa6kj6P4g2aJfnET3z8Uf3SWu60cjbtxTA5g8lxRdX/Bd2P92EagGwwAhANeNw8T8if99rJliR6Q==
   dependencies:
     vary "^1.1.2"
-
-"@lion/ajax@^0.5.4":
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/@lion/ajax/-/ajax-0.5.4.tgz#54cb1fb54d2a8283764c7e269d99046e7695e5f5"
-  integrity sha512-MrHqinJrsukbmoqkANQxRD/Tu8Z92Sl6d2hRt7/A6oJC4MemXwpnX6U0fONXrAqmC0z/kwfGAQMdQzXaHIahYA==
-  dependencies:
-    "@bundled-es-modules/axios" "0.18.1"
-    "@lion/core" "0.12.0"
-    singleton-manager "1.1.2"
 
 "@lion/button@^0.7.13":
   version "0.7.13"
@@ -2508,11 +2494,11 @@
     "@vaadin/vaadin-development-mode-detector" "^2.0.0"
 
 "@web/browser-logs@^0.1.2", "@web/browser-logs@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@web/browser-logs/-/browser-logs-0.1.3.tgz#288b8f21d745cb8e643e59936079dc77c03470f2"
-  integrity sha512-MJT3R+gOEa38kDFmXM79BqXb+hGgoo9D061tfcnfzNgwLpYklsBTjBvB/MJDqFAx0zu2SipGA/+WPgzrnud8Qw==
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@web/browser-logs/-/browser-logs-0.1.4.tgz#0890657e92ceacb793ed982cacdc9e8bd821fbc2"
+  integrity sha512-R35Gk6I7Ipo+V7AzcfMnKO3QIh9mMHCbNZfMksH3gAfufoxBZ1EW0b6nXpzKBprSCw2bP7qw/AozOhkZAXmhDQ==
 
-"@web/config-loader@^0.1.1":
+"@web/config-loader@^0.1.1", "@web/config-loader@^0.1.2":
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/@web/config-loader/-/config-loader-0.1.2.tgz#c1dd2368288329a009a017ebc9a307be63c2e855"
   integrity sha512-uh+VL79V/TJjrleAQM66Rke8jKu/J/sqzhiJ08iwGcUKV5lqUbLxGoC4RiNRwcEh8dna9HLBPpi935EuAD5tnw==
@@ -2536,7 +2522,7 @@
     open "^7.1.0"
     portfinder "^1.0.27"
 
-"@web/dev-server-core@^0.2.10":
+"@web/dev-server-core@^0.2.10", "@web/dev-server-core@^0.2.6", "@web/dev-server-core@^0.2.9":
   version "0.2.10"
   resolved "https://registry.yarnpkg.com/@web/dev-server-core/-/dev-server-core-0.2.10.tgz#af769b0a3a3c81164193f3a936e17fc02947b4e4"
   integrity sha512-W78G7+oNp2Z8ECsdsiTAWCzS9qm5Hhl2fdf9xGOGG4zJAVT8XHqvQG0FCDqvRlQhcuA5RoQbTgCROlsA1TllwA==
@@ -2557,7 +2543,7 @@
     picomatch "^2.2.2"
     ws "^7.3.1"
 
-"@web/dev-server-core@^0.2.2", "@web/dev-server-core@^0.2.5", "@web/dev-server-core@^0.2.6", "@web/dev-server-core@^0.2.9":
+"@web/dev-server-core@^0.2.2", "@web/dev-server-core@^0.2.5":
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/@web/dev-server-core/-/dev-server-core-0.2.9.tgz#bf142fa3c09c52a31a9d9e5991128724887de3c2"
   integrity sha512-adTAOZ/yQQpOX42sKfj52SQl4lQDdvQSc9Wk3FkL26dMboX4bof/J0DKbpUT3jXrpu6BnogpQosgLUAvDSXcwg==
@@ -2633,17 +2619,17 @@
     chrome-launcher "^0.13.3"
     puppeteer-core "^5.0.0"
 
-"@web/test-runner-cli@^0.5.13":
-  version "0.5.13"
-  resolved "https://registry.yarnpkg.com/@web/test-runner-cli/-/test-runner-cli-0.5.13.tgz#e1dcc8e4ef3310cc06bf9400a90e1549241452e7"
-  integrity sha512-boeKON/Af/L8iU3tG7LJCmL8bhWKmXRS4wp36cPdMDUIsMCxIVfD1xQjcxdrjM5OQiEdAIx58VEHwaYaFFLGXA==
+"@web/test-runner-cli@^0.5.14":
+  version "0.5.14"
+  resolved "https://registry.yarnpkg.com/@web/test-runner-cli/-/test-runner-cli-0.5.14.tgz#e86d80f9323d22c47d4f8b97fc25f89da2ab5d7a"
+  integrity sha512-GYzpo3IE1jopnek1znIPypKMWjTjbrbH8CPBb5vdxxj0mhqzbEEbTTGezLij730HF7WNjO+fZTBjeHEWLTtioQ==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@types/babel__code-frame" "^7.0.1"
     "@web/browser-logs" "^0.1.2"
     "@web/config-loader" "^0.1.1"
     "@web/test-runner-chrome" "^0.6.4"
-    "@web/test-runner-core" "^0.7.16"
+    "@web/test-runner-core" "^0.7.18"
     camelcase "^6.0.0"
     chalk "^4.1.0"
     cli-cursor "^3.1.0"
@@ -2668,10 +2654,10 @@
   dependencies:
     "@web/test-runner-core" "^0.7.13"
 
-"@web/test-runner-core@^0.7.13", "@web/test-runner-core@^0.7.15", "@web/test-runner-core@^0.7.16", "@web/test-runner-core@^0.7.17", "@web/test-runner-core@^0.7.4":
-  version "0.7.17"
-  resolved "https://registry.yarnpkg.com/@web/test-runner-core/-/test-runner-core-0.7.17.tgz#afbfc6fc682eebe744ac249460e99fb203c6c299"
-  integrity sha512-wTHkFDjt0QBQXrLGMhrHTx6HB4KdpDo0FuM5nvxyw/p6tSp8banJalv+xKhX8cONR6XPFoaenn3oToK12EemwQ==
+"@web/test-runner-core@^0.7.13", "@web/test-runner-core@^0.7.15", "@web/test-runner-core@^0.7.18", "@web/test-runner-core@^0.7.4":
+  version "0.7.18"
+  resolved "https://registry.yarnpkg.com/@web/test-runner-core/-/test-runner-core-0.7.18.tgz#c9b1f1d4d705a845becd7abd936b0b4d304d2b5f"
+  integrity sha512-Z5rbhqQXDwAN54GZuVd3BalPeIGpMOkddnwfijIpRTFBkeBaVeLbpObfg4rpBsGvSBu8imemLJb//3YSeQkT2w==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@web/browser-logs" "^0.1.3"
@@ -2679,6 +2665,7 @@
     co-body "^6.0.0"
     debounce "^1.2.0"
     dependency-graph "^0.9.0"
+    globby "^11.0.1"
     istanbul-lib-coverage "^3.0.0"
     picomatch "^2.2.2"
     uuid "^8.1.0"
@@ -2709,19 +2696,21 @@
     playwright "^1.3.0"
 
 "@web/test-runner@^0.7.24":
-  version "0.7.31"
-  resolved "https://registry.yarnpkg.com/@web/test-runner/-/test-runner-0.7.31.tgz#ff5c02d9c1b020b117b4a6aa5c41e63b2235df47"
-  integrity sha512-hZAvyX+OtPlHi+vcXOGnBFrIY+lOojeLoaPnkn7RGMGfQS4RTBqTCo75ECdv8qm05TOecgNf4dXgcbgOdySYPw==
+  version "0.7.32"
+  resolved "https://registry.yarnpkg.com/@web/test-runner/-/test-runner-0.7.32.tgz#189c4c0563d8b70b0085cfa3b8cc8bb59a2be2f7"
+  integrity sha512-+rVqju67NcjkRLoGk7x3hGtkFpwbw9Sr1Fj5afuIi55GC96acnQOOhlgoJU1h5Y4copSxw1rxLYuBU3AIywdUA==
   dependencies:
     "@rollup/plugin-node-resolve" "^8.1.0"
+    "@web/config-loader" "^0.1.2"
     "@web/dev-server-rollup" "^0.2.9"
     "@web/test-runner-chrome" "^0.6.7"
-    "@web/test-runner-cli" "^0.5.13"
+    "@web/test-runner-cli" "^0.5.14"
     "@web/test-runner-commands" "^0.1.5"
-    "@web/test-runner-core" "^0.7.17"
+    "@web/test-runner-core" "^0.7.18"
     "@web/test-runner-mocha" "^0.3.3"
     command-line-args "^5.1.1"
     deepmerge "^4.2.2"
+    globby "^11.0.1"
 
 "@webcomponents/shadycss@^1.9.4":
   version "1.10.1"
@@ -3524,12 +3513,11 @@ checkstyle-formatter@^1.1.0:
   dependencies:
     xml-escape "^1.0.0"
 
-chi-wc@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/chi-wc/-/chi-wc-0.6.0.tgz#98c2a522fc5626967db6ee9f9a9f5567c4ba608f"
-  integrity sha512-OScRhtKpH8w+2P3sf34Y8yM+fpD6f5tLRMLLSSSVeUM0fb1SRZ6GBrFNL8Gh8d+C0JfFuiuuUe+7GThsOVcJMQ==
+chi-wc@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/chi-wc/-/chi-wc-0.7.0.tgz#be6af7672f784c73187cf287fd0b52b4e5d127dc"
+  integrity sha512-+Cn0UxZQO0fPStWkgS5dEVBvmKZ/29QlAkKjJsjKgIY03dQpGIRjOajU8BFPbhr8z7cC0+Bk/jdzvScCgWAqUw==
   dependencies:
-    "@lion/ajax" "^0.5.4"
     "@lion/button" "^0.7.13"
     "@lion/core" "^0.12.0"
     "@lion/form-core" "^0.6.1"
