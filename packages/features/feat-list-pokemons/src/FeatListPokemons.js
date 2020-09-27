@@ -2,6 +2,7 @@ import { html, LitElement, LocalizeMixin, nothing } from 'chi-wc';
 
 import { featListPokemonStyle } from './FeatListPokemons.style.js';
 import { getPokemonNamesAction } from './actions/getPokemonNamesAction.js';
+import { PokemonSelectedEvent } from './PokemonSelectedEvent.js';
 import { namespace } from './namespace.js';
 
 import 'chi-wc/chi-button.js';
@@ -39,6 +40,7 @@ export class FeatListPokemons extends LocalizeMixin(LitElement) {
     ];
   }
 
+  /** Constructor a FeatListPokemon instance. */
   constructor() {
     super();
 
@@ -49,6 +51,17 @@ export class FeatListPokemons extends LocalizeMixin(LitElement) {
   /** Start loading the pokemon list */
   async _startLoadingPokemonNames() {
     this.pokemonNames = await getPokemonNamesAction();
+  }
+
+  /**
+   * Dispatch a PokemonSelectedEvent.
+   *
+   * @param {string} pokemonName
+   * @return {Promise<void>}
+   * @private
+   */
+  async _handlePokemonSelected(pokemonName) {
+    this.dispatchEvent(new PokemonSelectedEvent(pokemonName));
   }
 
   /** @override */
@@ -73,7 +86,15 @@ export class FeatListPokemons extends LocalizeMixin(LitElement) {
                   .reduce((acc, part) => acc && name.toLowerCase().indexOf(part) !== -1, true),
               )
               .map(
-                pokemonName => html` <li><pokemon-card name="${pokemonName}"></pokemon-card></li> `,
+                pokemonName =>
+                  html`
+                    <li>
+                      <pokemon-card
+                        name="${pokemonName}"
+                        @click="${() => this._handlePokemonSelected(pokemonName)}"
+                      ></pokemon-card>
+                    </li>
+                  `,
               )
           : nothing}
       </ul>
