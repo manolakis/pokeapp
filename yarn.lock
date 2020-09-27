@@ -2536,6 +2536,27 @@
     open "^7.1.0"
     portfinder "^1.0.27"
 
+"@web/dev-server-core@^0.2.10":
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/@web/dev-server-core/-/dev-server-core-0.2.10.tgz#af769b0a3a3c81164193f3a936e17fc02947b4e4"
+  integrity sha512-W78G7+oNp2Z8ECsdsiTAWCzS9qm5Hhl2fdf9xGOGG4zJAVT8XHqvQG0FCDqvRlQhcuA5RoQbTgCROlsA1TllwA==
+  dependencies:
+    "@types/ws" "^7.2.6"
+    chokidar "^3.4.0"
+    clone "^2.1.2"
+    es-module-lexer "^0.3.24"
+    get-stream "^6.0.0"
+    is-stream "^2.0.0"
+    isbinaryfile "^4.0.6"
+    koa "^2.13.0"
+    koa-etag "^3.0.0"
+    koa-static "^5.0.0"
+    lru-cache "^5.1.1"
+    mime-types "^2.1.27"
+    parse5 "^6.0.0"
+    picomatch "^2.2.2"
+    ws "^7.3.1"
+
 "@web/dev-server-core@^0.2.2", "@web/dev-server-core@^0.2.5", "@web/dev-server-core@^0.2.6", "@web/dev-server-core@^0.2.9":
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/@web/dev-server-core/-/dev-server-core-0.2.9.tgz#bf142fa3c09c52a31a9d9e5991128724887de3c2"
@@ -2579,17 +2600,17 @@
     rollup "^2.20.0"
     whatwg-url "^8.1.0"
 
-"@web/dev-server@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@web/dev-server/-/dev-server-0.0.10.tgz#06bfc313293c97dde8fd0bb4610e27fdadf97374"
-  integrity sha512-wCEGbGv7gCjsgamemRXaS/ba8+fj0XlqKjXs8Cbm2He2j/uMTyNEEYEg9TmGah87cEJZqvpcvsqB7CAItBwqww==
+"@web/dev-server@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@web/dev-server/-/dev-server-0.0.11.tgz#288782f439923489f5e7dc9fa32551a6c6317642"
+  integrity sha512-jd2Spcdr2OjB2ALrOLzRve+KVkbq/Qot1YqSdOnsNeOlsOwd80HfiwhpmD+Dneyqn5t7/BBgqu7HZ7EuDWixZg==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@rollup/plugin-node-resolve" "^8.4.0"
     "@types/command-line-args" "^5.0.0"
     "@web/config-loader" "^0.1.1"
     "@web/dev-server-cli" "^0.0.3"
-    "@web/dev-server-core" "^0.2.9"
+    "@web/dev-server-core" "^0.2.10"
     "@web/dev-server-rollup" "^0.2.5"
     camelcase "^6.0.0"
     chalk "^4.1.0"
@@ -4568,7 +4589,7 @@ eslint-plugin-import@^2.18.2, eslint-plugin-import@^2.22.0:
     resolve "^1.17.0"
     tsconfig-paths "^3.9.0"
 
-eslint-plugin-lit@^1.2.0:
+eslint-plugin-lit@^1.2.0, eslint-plugin-lit@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-lit/-/eslint-plugin-lit-1.2.2.tgz#f11b3de0f1f5527791753648225c40b73596f94f"
   integrity sha512-7phlR1GKO4zDsrxeBcPTHRTZrl5eGPHJblMmKyqAEYWVk5e8F1QOuVBKst973T+4AdGj0Ti4dWetL1C8XiAJnA==
@@ -4590,7 +4611,7 @@ eslint-plugin-wc@^1.2.0:
     js-levenshtein-esm "^1.2.0"
     validate-element-name "^2.1.1"
 
-eslint-scope@^5.1.0:
+eslint-scope@^5.1.0, eslint-scope@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-5.1.1.tgz#e786e59a66cb92b3f6c1fb0d508aab174848f48c"
   integrity sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw==
@@ -4610,7 +4631,7 @@ eslint-visitor-keys@^1.0.0, eslint-visitor-keys@^1.1.0, eslint-visitor-keys@^1.3
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.3.0.tgz#30ebd1ef7c2fdff01c3a4f151044af25fab0523e"
   integrity sha512-6J72N8UNa462wa/KFODt/PJ3IU60SDpC3QXC1Hjc1BXXpfL2C9R5+AU7jhe0F6GREqVMh4Juu+NY7xn+6dipUQ==
 
-eslint@^7.6.0, eslint@^7.9.0:
+eslint@^7.6.0:
   version "7.9.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.9.0.tgz#522aeccc5c3a19017cf0cb46ebfd660a79acf337"
   integrity sha512-V6QyhX21+uXp4T+3nrNfI3hQNBDa/P8ga7LoQOenwrlEFXrEnUEE+ok1dMtaS3b6rmLXhT1TkTIsG75HMLbknA==
@@ -4624,6 +4645,49 @@ eslint@^7.6.0, eslint@^7.9.0:
     doctrine "^3.0.0"
     enquirer "^2.3.5"
     eslint-scope "^5.1.0"
+    eslint-utils "^2.1.0"
+    eslint-visitor-keys "^1.3.0"
+    espree "^7.3.0"
+    esquery "^1.2.0"
+    esutils "^2.0.2"
+    file-entry-cache "^5.0.1"
+    functional-red-black-tree "^1.0.1"
+    glob-parent "^5.0.0"
+    globals "^12.1.0"
+    ignore "^4.0.6"
+    import-fresh "^3.0.0"
+    imurmurhash "^0.1.4"
+    is-glob "^4.0.0"
+    js-yaml "^3.13.1"
+    json-stable-stringify-without-jsonify "^1.0.1"
+    levn "^0.4.1"
+    lodash "^4.17.19"
+    minimatch "^3.0.4"
+    natural-compare "^1.4.0"
+    optionator "^0.9.1"
+    progress "^2.0.0"
+    regexpp "^3.1.0"
+    semver "^7.2.1"
+    strip-ansi "^6.0.0"
+    strip-json-comments "^3.1.0"
+    table "^5.2.3"
+    text-table "^0.2.0"
+    v8-compile-cache "^2.0.3"
+
+eslint@^7.9.0:
+  version "7.10.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.10.0.tgz#494edb3e4750fb791133ca379e786a8f648c72b9"
+  integrity sha512-BDVffmqWl7JJXqCjAK6lWtcQThZB/aP1HXSH1JKwGwv0LQEdvpR7qzNrUT487RM39B5goWuboFad5ovMBmD8yA==
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    "@eslint/eslintrc" "^0.1.3"
+    ajv "^6.10.0"
+    chalk "^4.0.0"
+    cross-spawn "^7.0.2"
+    debug "^4.0.1"
+    doctrine "^3.0.0"
+    enquirer "^2.3.5"
+    eslint-scope "^5.1.1"
     eslint-utils "^2.1.0"
     eslint-visitor-keys "^1.3.0"
     espree "^7.3.0"
