@@ -32,6 +32,7 @@ export const pokeAppStyle = [
 
     .pokeapp__header {
       z-index: 1;
+      --color-background-base: #ef5350;
     }
 
     .pokeapp__content {
@@ -39,9 +40,9 @@ export const pokeAppStyle = [
       flex: 1;
     }
 
-    .pokeball {
-      height: 3rem;
-      width: 3rem;
+    .logo {
+      height: 2.5rem;
+      margin-top: 0.5rem;
     }
 
     ${desktopGenerator(css`
