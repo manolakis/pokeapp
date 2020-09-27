@@ -4,7 +4,7 @@
   <script type="importmap">
     {
       "imports": {
-        "@pokeapp/common": "./mocks/DataProvider.js"
+        "../../src/providers/DataProvider.js": "./mocks/DataProvider.js"
       }
     }
   </script>
@@ -14,7 +14,7 @@
     // eslint-disable-next-line import/no-extraneous-dependencies
     import { runTests } from '@web/test-runner-mocha';
 
-    runTests(() => import('./PokemonProvider.test.html.js'));
+    runTests(() => import('./PokeAPIProvider.test.html.js'));
   </script>
 </body>
 </html>
