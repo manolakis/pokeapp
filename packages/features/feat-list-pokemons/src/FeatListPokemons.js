@@ -60,7 +60,7 @@ export class FeatListPokemons extends LocalizeMixin(LitElement) {
           label="${this.msgLit(`${namespace}:search.label`)}"
           placeholder="${this.msgLit(`${namespace}:search.placeholder`)}"
           @model-value-changed=${({ target }) => {
-            this.search = target.modelValue.replace(/-/g, ' ');
+            this.search = target.modelValue.replace(/-/g, ' ').toLowerCase();
           }}
         ></chi-input>
       </div>
@@ -70,7 +70,7 @@ export class FeatListPokemons extends LocalizeMixin(LitElement) {
               .filter(name =>
                 this.search
                   .split(/\s/)
-                  .reduce((acc, part) => acc && name.indexOf(part) !== -1, true),
+                  .reduce((acc, part) => acc && name.toLowerCase().indexOf(part) !== -1, true),
               )
               .map(
                 pokemonName => html` <li><pokemon-card name="${pokemonName}"></pokemon-card></li> `,

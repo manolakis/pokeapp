@@ -87,4 +87,19 @@ describe('FeatListPokemons', () => {
 
     expect($list.children.length).to.be.equal(1);
   });
+
+  it('should do the search case insensitive', async () => {
+    const pokemonProvider = getPokemonProvider();
+    sandbox.stub(pokemonProvider, 'getPokemon').returns(pikachuData);
+    sandbox.stub(pokemonProvider, 'getPokemonNames').returns(['pikachu']);
+
+    const $el = await scopedFixture(html` <feat-list-pokemons></feat-list-pokemons> `);
+    const $searchInput = $el.shadowRoot.querySelector('[data-id="search"]');
+    const $list = $el.shadowRoot.querySelector('.pokemon-list');
+
+    $searchInput.modelValue = 'PIKA';
+    await elementUpdated($el);
+
+    expect($list.children.length).to.be.equal(1);
+  });
 });
