@@ -22,7 +22,6 @@ export const pokeAppStyle = [
       flex-direction: column;
       align-items: center;
       justify-content: start;
-      height: 100%;
       background-color: ${tokenColorBackgroundBaseDark};
     }
     .pokeapp__header,
@@ -38,6 +37,7 @@ export const pokeAppStyle = [
     .pokeapp__content {
       background-color: ${tokenColorBackgroundBase};
       flex: 1;
+      padding: 0.5rem;
     }
 
     .logo {

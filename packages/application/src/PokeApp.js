@@ -1,4 +1,5 @@
 import { LitElement, LocalizeMixin, html } from 'chi-wc';
+import { Router } from '@vaadin/router';
 
 import { pokeAppStyle } from './PokeApp.style.js';
 import 'chi-wc/chi-icon.js';
@@ -27,6 +28,25 @@ export class PokeApp extends LocalizeMixin(LitElement) {
         },
       },
     ];
+  }
+
+  static get routes() {
+    return [
+      {
+        path: '/',
+        component: 'feat-list-pokemons',
+        action: async () => import('@pokeapp/feat-list-pokemons/feat-list-pokemons.js'),
+      },
+    ];
+  }
+
+  firstUpdated() {
+    super.firstUpdated();
+
+    if (!this.router) {
+      this.router = new Router(this.shadowRoot.querySelector('.pokeapp__content'));
+      this.router.setRoutes(this.constructor.routes);
+    }
   }
 
   render() {
