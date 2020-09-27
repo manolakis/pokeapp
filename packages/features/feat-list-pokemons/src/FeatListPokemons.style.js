@@ -1,4 +1,4 @@
-import { css, rem } from 'chi-wc';
+import { css, rem, tabletPortraitGenerator } from 'chi-wc';
 import { boxSizingStyle } from '@pokeapp/common';
 
 // language=CSS
@@ -10,13 +10,18 @@ export const featListPokemonStyle = [
       margin: ${rem[16]} -0.5rem;
       padding: 0;
       display: grid;
-      /*grid-template-columns: repeat(auto-fit, 166px);*/
-      grid-template-columns: repeat(auto-fill, minmax(156px, 1fr));
-      justify-content: space-between;
+      grid-template-columns: repeat(auto-fit, 156px);
+      justify-content: space-around;
     }
 
     .pokemon-list > li {
       padding: ${rem[8]};
     }
+
+    ${tabletPortraitGenerator(css`
+      .pokemon-list {
+        grid-template-columns: repeat(auto-fill, minmax(156px, 1fr));
+      }
+    `)}
   `,
 ];

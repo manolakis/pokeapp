@@ -102,4 +102,29 @@ describe('FeatListPokemons', () => {
 
     expect($list.children.length).to.be.equal(1);
   });
+
+  it('should throw an event selecting a Pokemon', async () => {
+    const pokemonProvider = getPokemonProvider();
+    const stub = sandbox.stub();
+    sandbox.stub(pokemonProvider, 'getPokemon').returns(pikachuData);
+    sandbox.stub(pokemonProvider, 'getPokemonNames').returns(['pikachu']);
+
+    const $el = await scopedFixture(
+      html`
+        <feat-list-pokemons
+          @pokemon-selected="${({ pokemonName }) => stub(pokemonName)}"
+        ></feat-list-pokemons>
+      `,
+    );
+    const $searchInput = $el.shadowRoot.querySelector('[data-id="search"]');
+
+    $searchInput.modelValue = 'pikachu';
+    await elementUpdated($el);
+
+    const $pikachuCard = $el.shadowRoot.querySelector('[name="pikachu"]');
+    $pikachuCard.click();
+
+    expect(stub.calledOnce).to.be.true;
+    expect(stub.firstCall.firstArg).to.be.equal('pikachu');
+  });
 });
