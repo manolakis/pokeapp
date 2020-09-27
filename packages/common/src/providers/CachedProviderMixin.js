@@ -7,7 +7,7 @@ import { dedupeMixin } from 'chi-wc';
 /**
  * Obtains the cache key
  * @param {string} url
- * @param {object<string, *>>}params
+ * @param {object<string, any>} params
  * @return {string}
  */
 const getCacheKey = ({ url, params = {} } = {}) => {
@@ -17,7 +17,7 @@ const getCacheKey = ({ url, params = {} } = {}) => {
     search.append(key, value);
   }
 
-  return `${url}${search.toString()}`;
+  return `${url}?${search.toString()}`;
 };
 
 /**
