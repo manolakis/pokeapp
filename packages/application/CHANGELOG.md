@@ -1,5 +1,15 @@
 # @pokeapp/app
 
+## 0.3.1
+
+### Patch Changes
+
+- a052817: upgrade dependencies
+- Updated dependencies [f79363d]
+- Updated dependencies [a052817]
+- Updated dependencies [1a6ceb8]
+  - @pokeapp/common@0.3.0
+
 ## 0.3.0
 
 ### Minor Changes
