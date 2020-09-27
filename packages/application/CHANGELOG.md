@@ -1,5 +1,15 @@
 # @pokeapp/app
 
+## 0.4.0
+
+### Minor Changes
+
+- 99bd127: add route to feat-list-pokemons
+
+### Patch Changes
+
+- 636c545: add PokeApp logo
+
 ## 0.3.1
 
 ### Patch Changes
