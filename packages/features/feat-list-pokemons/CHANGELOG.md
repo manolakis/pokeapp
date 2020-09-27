@@ -1,5 +1,11 @@
 # @pokeapp/feat-list-pokemons
 
+## 0.4.1
+
+### Patch Changes
+
+- 951e145: add entry point
+
 ## 0.4.0
 
 ### Minor Changes
