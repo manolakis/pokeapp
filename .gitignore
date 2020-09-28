@@ -109,3 +109,6 @@ typings/
 
 ### Storybook ###
 storybook-static/
+
+### Build ###
+dist/
