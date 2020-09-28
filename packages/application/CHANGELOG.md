@@ -1,5 +1,11 @@
 # @pokeapp/app
 
+## 0.4.1
+
+### Patch Changes
+
+- c4576d5: Use SVG logo
+
 ## 0.4.0
 
 ### Minor Changes
