@@ -2,6 +2,8 @@ import { LitElement, LocalizeMixin, html } from 'chi-wc';
 import { Router } from '@vaadin/router';
 
 import { pokeAppStyle } from './PokeApp.style.js';
+import logo from '../assets/images/pokeapp.svg.js';
+
 import 'chi-wc/chi-icon.js';
 import 'chi-wc/chi-header.js';
 
@@ -53,11 +55,7 @@ export class PokeApp extends LocalizeMixin(LitElement) {
     return html`
       <div class="pokeapp__container">
         <chi-header class="pokeapp__header">
-          <img
-            slot="header-brand-logo"
-            class="logo"
-            src="${new URL('../assets/images/pokeapp.png', import.meta.url).href}"
-          />
+          <chi-icon slot="header-brand-logo" class="logo" .svg="${logo}"></chi-icon>
         </chi-header>
         <section class="pokeapp__content"></section>
       </div>

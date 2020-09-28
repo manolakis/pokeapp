@@ -42,6 +42,7 @@ export const pokeAppStyle = [
 
     .logo {
       height: 2.5rem;
+      width: 6rem;
       margin-top: 0.5rem;
     }
 
