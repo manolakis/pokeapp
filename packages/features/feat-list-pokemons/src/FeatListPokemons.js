@@ -1,18 +1,32 @@
-import { html, LitElement, LocalizeMixin, nothing } from 'chi-wc';
+import {
+  LitElement,
+  ScopedElementsMixin,
+  LocalizeMixin,
+  html,
+  nothing,
+  ChiButton,
+  ChiInput,
+} from 'chi-wc';
 
 import { featListPokemonStyle } from './FeatListPokemons.style.js';
 import { getPokemonNamesAction } from './actions/getPokemonNamesAction.js';
 import { PokemonSelectedEvent } from './PokemonSelectedEvent.js';
+import { PokemonCard } from './components/pokemon-card/PokemonCard.js';
 import { namespace } from './namespace.js';
 
-import 'chi-wc/chi-button.js';
-import 'chi-wc/chi-input.js';
-import './components/pokemon-card.js';
-
-export class FeatListPokemons extends LocalizeMixin(LitElement) {
+export class FeatListPokemons extends ScopedElementsMixin(LocalizeMixin(LitElement)) {
   /** @override */
   static get styles() {
     return [super.style || [], featListPokemonStyle];
+  }
+
+  /** @override */
+  static get scopedElements() {
+    return {
+      'chi-button': ChiButton,
+      'chi-input': ChiInput,
+      'pokemon-card': PokemonCard,
+    };
   }
 
   /** @override */

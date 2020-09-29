@@ -1,18 +1,26 @@
-import { LitElement, LocalizeMixin, html } from 'chi-wc';
+import { LitElement, ScopedElementsMixin, LocalizeMixin, html, ChiHeader, ChiIcon } from 'chi-wc';
 import { Router } from '@vaadin/router';
 
+import { NavigationEvent } from './events/NavigationEvent.js';
 import { pokeAppStyle } from './PokeApp.style.js';
 import logo from '../assets/images/pokeapp.svg.js';
-
-import 'chi-wc/chi-icon.js';
-import 'chi-wc/chi-header.js';
+import { NavigateToPokemonDetailsEvent } from './events/NavigateToPokemonDetailsEvent.js';
 
 /** i18n namespace */
 const namespace = 'pokeapp';
 
-export class PokeApp extends LocalizeMixin(LitElement) {
+export class PokeApp extends ScopedElementsMixin(LocalizeMixin(LitElement)) {
+  /** @override */
   static get styles() {
     return [super.styles || [], pokeAppStyle];
+  }
+
+  /** @override */
+  static get scopedElements() {
+    return {
+      'chi-header': ChiHeader,
+      'chi-icon': ChiIcon,
+    };
   }
 
   /** @override */
@@ -32,16 +40,84 @@ export class PokeApp extends LocalizeMixin(LitElement) {
     ];
   }
 
+  /**
+   * Returns the routes config for Vaadin router.
+   *
+   * @return {{
+   *   path: string,
+   *   component: string,
+   *   action: (function(): Promise<*>)
+   * }[]}
+   */
   static get routes() {
     return [
       {
         path: '/',
-        component: 'feat-list-pokemons',
-        action: async () => import('@pokeapp/feat-list-pokemons/feat-list-pokemons.js'),
+        component: 'pokeapp-list-pokemons',
+        action: async () => import('./components/pokeapp-list-pokemons.js'),
+      },
+      {
+        path: '/:name',
+        component: 'pokeapp-pokemon-details',
+        action: async () => import('./components/pokeapp-pokemon-details.js'),
       },
     ];
   }
 
+  /** Creates an instance. */
+  constructor() {
+    super();
+
+    this._handleNavigationEvent = this._handleNavigationEvent.bind(this);
+  }
+
+  /** @override */
+  connectedCallback() {
+    if (super.connectedCallback) {
+      super.connectedCallback();
+    }
+
+    this.addEventListener(NavigationEvent.eventName, this._handleNavigationEvent);
+  }
+
+  /** @override */
+  disconnectedCallback() {
+    this.removeEventListener(NavigationEvent.eventName, this._handleNavigationEvent);
+
+    if (super.disconnectedCallback) {
+      super.disconnectedCallback();
+    }
+  }
+
+  /**
+   * Handles the navigation events.
+   * @param {typeof NavigationEvent} event
+   * @private
+   */
+  _handleNavigationEvent(event) {
+    if (this.router) {
+      if (event instanceof NavigateToPokemonDetailsEvent) {
+        this.__setRoute(
+          this.router.urlForName('pokeapp-pokemon-details', {
+            name: event.pokemonName,
+          }),
+        );
+      }
+    }
+  }
+
+  /**
+   * Changes the windoe location.
+   *
+   * @param {string} newLocation
+   * @private
+   */
+  // eslint-disable-next-line class-methods-use-this
+  __setRoute(newLocation) {
+    window.location = newLocation;
+  }
+
+  /** @override */
   firstUpdated() {
     super.firstUpdated();
 
@@ -51,6 +127,7 @@ export class PokeApp extends LocalizeMixin(LitElement) {
     }
   }
 
+  /** @override */
   render() {
     return html`
       <div class="pokeapp__container">

@@ -1,0 +1,20 @@
+<html>
+<head>
+  <!-- the import map to use in our test -->
+  <script type="importmap">
+    {
+      "imports": {
+        "@pokeapp/feat-list-pokemons": "../mocks/FeatListPokemons.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <script type="module">
+    // eslint-disable-next-line import/no-extraneous-dependencies
+    import { runTests } from '@web/test-runner-mocha';
+
+    runTests(() => import('./PokeAppListPokemons.test.html.js'));
+  </script>
+</body>
+</html>
