@@ -1,5 +1,11 @@
 # @pokeapp/common
 
+## 0.4.1
+
+### Patch Changes
+
+- 3198bf4: upgrade dependencies
+
 ## 0.4.0
 
 ### Minor Changes
