@@ -114,7 +114,7 @@ export class PokeApp extends ScopedElementsMixin(LocalizeMixin(LitElement)) {
    */
   // eslint-disable-next-line class-methods-use-this
   __setRoute(newLocation) {
-    window.location = newLocation;
+    Router.go(newLocation);
   }
 
   /** @override */
