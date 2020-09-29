@@ -1,5 +1,11 @@
 # @pokeapp/app
 
+## 0.5.1
+
+### Patch Changes
+
+- 56619a3: fix the application routing
+
 ## 0.5.0
 
 ### Minor Changes
