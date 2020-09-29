@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "@pokeapp/common": "0.4.0",
-    "chi-wc": "^0.7.0",
+    "chi-wc": "^0.8.0",
     "singleton-manager": "^1.1.2"
   },
   "devDependencies": {

@@ -20,7 +20,7 @@
     "@pokeapp/common": "0.4.0",
     "@pokeapp/feat-list-pokemons": "^0.4.2",
     "@vaadin/router": "^1.7.2",
-    "chi-wc": "^0.7.0"
+    "chi-wc": "^0.8.0"
   },
   "devDependencies": {
     "@open-wc/testing": "^2.5.26",

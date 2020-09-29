@@ -17,7 +17,7 @@
     "src"
   ],
   "dependencies": {
-    "chi-wc": "^0.7.0"
+    "chi-wc": "^0.8.0"
   },
   "devDependencies": {
     "@open-wc/testing": "^2.5.26",
