@@ -2,7 +2,7 @@
   "name": "@pokeapp/app",
   "description": "Pokemon Sample Application",
   "license": "MIT",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "author": "Manuel Martin <manuel.martin@gmail.com>",
   "main": "index.js",
   "module": "index.js",
@@ -17,8 +17,8 @@
     "src"
   ],
   "dependencies": {
-    "@pokeapp/common": "0.3.0",
-    "@pokeapp/feat-list-pokemons": "^0.4.1",
+    "@pokeapp/common": "0.4.0",
+    "@pokeapp/feat-list-pokemons": "^0.4.2",
     "@vaadin/router": "^1.7.2",
     "chi-wc": "^0.7.0"
   },
