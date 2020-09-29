@@ -2,4 +2,4 @@
 '@pokeapp/common': minor
 ---
 
-add PokemonDetails type
+add more details to the Pokemon type

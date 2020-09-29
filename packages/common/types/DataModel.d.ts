@@ -1,10 +1,3 @@
-export type Pokemon = {
-  /** The name for this resource. */
-  name: string;
-  /** URL of the Pokemon image */
-  sprite: string | null;
-};
-
 export type PokemonStats = {
   hp: number;
   attack: number;
@@ -14,15 +7,17 @@ export type PokemonStats = {
   speed: number;
 };
 
-export type PokemonDetails = {
+export type Pokemon = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
   name: string;
-  /** The height of this Pokémon in decimetres. */
+  /** The height of this Pokemon in decimetres. */
   height: number;
-  /** The weight of this Pokémon in hectograms. */
+  /** The weight of this Pokemon in hectograms. */
   weight: number;
+  /** URL of the Pokemon image */
+  sprite: string | null;
   /** Stats values for this Pokemon. */
   stats: PokemonStats;
 };

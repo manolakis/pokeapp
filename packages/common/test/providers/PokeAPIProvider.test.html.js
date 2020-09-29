@@ -42,9 +42,20 @@ describe('PokeAPIProvider', () => {
       const pokemon = await provider.getPokemon('pikachu');
 
       expect(pokemon).to.be.eql({
+        id: 25,
         name: 'pikachu',
+        height: 4,
+        weight: 60,
         sprite:
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg',
+        stats: {
+          hp: 35,
+          attack: 55,
+          defense: 40,
+          'special-attack': 50,
+          'special-defense': 50,
+          speed: 90,
+        },
       });
     });
   });
