@@ -1,5 +1,11 @@
 # @pokeapp/feat-pokemon-details
 
+## 0.2.1
+
+### Patch Changes
+
+- 4f5bf94: fix the image set on Samsung Internet browsers
+
 ## 0.2.0
 
 ### Minor Changes
