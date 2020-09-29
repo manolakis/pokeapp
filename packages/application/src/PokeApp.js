@@ -1,18 +1,23 @@
-import { LitElement, LocalizeMixin, html } from 'chi-wc';
+import { LitElement, ScopedElementsMixin, LocalizeMixin, html, ChiHeader, ChiIcon } from 'chi-wc';
 import { Router } from '@vaadin/router';
 
 import { pokeAppStyle } from './PokeApp.style.js';
 import logo from '../assets/images/pokeapp.svg.js';
 
-import 'chi-wc/chi-icon.js';
-import 'chi-wc/chi-header.js';
-
 /** i18n namespace */
 const namespace = 'pokeapp';
 
-export class PokeApp extends LocalizeMixin(LitElement) {
+export class PokeApp extends ScopedElementsMixin(LocalizeMixin(LitElement)) {
   static get styles() {
     return [super.styles || [], pokeAppStyle];
+  }
+
+  /** @override */
+  static get scopedElements() {
+    return {
+      'chi-header': ChiHeader,
+      'chi-icon': ChiIcon,
+    };
   }
 
   /** @override */

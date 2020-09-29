@@ -57,6 +57,7 @@ export class PokemonStats extends LocalizeMixin(LitElement) {
     `;
   }
 
+  /** @override */
   render() {
     return html`
       <h2>${this.msgLit(`${namespace}:pokemonStats.title`)}</h2>

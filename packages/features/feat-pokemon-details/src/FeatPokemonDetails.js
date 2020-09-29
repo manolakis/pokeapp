@@ -1,15 +1,21 @@
-import { html, LitElement, LocalizeMixin, until } from 'chi-wc';
+import { LitElement, ScopedElementsMixin, LocalizeMixin, html, until } from 'chi-wc';
 
 import { featPokemonDetailsStyle } from './FeatPokemonDetails.style.js';
 import { namespace } from './namespace.js';
 import { getPokemonAction } from './actions/getPokemonAction.js';
+import { PokemonStats } from './components/pokemon-stats/PokemonStats.js';
 
-import './components/pokemon-stats.js';
-
-export class FeatPokemonDetails extends LocalizeMixin(LitElement) {
+export class FeatPokemonDetails extends ScopedElementsMixin(LocalizeMixin(LitElement)) {
   /** @override */
   static get styles() {
     return [super.style || [], featPokemonDetailsStyle];
+  }
+
+  /** @override */
+  static get scopedElements() {
+    return {
+      'pokemon-stats': PokemonStats,
+    };
   }
 
   /** @override */

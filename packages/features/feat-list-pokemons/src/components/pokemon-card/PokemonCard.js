@@ -1,10 +1,8 @@
-import { LitElement, LocalizeMixin, html, until } from 'chi-wc';
-import { pokemonCardStyle } from './PokemonCard.style.js';
+import { LitElement, ScopedElementsMixin, LocalizeMixin, html, until, ChiIcon } from 'chi-wc';
 import { getPokemonAction } from '../../actions/getPokemonAction.js';
-import notFoundIcon from './pokeball.svg.js';
+import { pokemonCardStyle } from './PokemonCard.style.js';
 import { namespace } from '../../namespace.js';
-
-import 'chi-wc/chi-icon.js';
+import notFoundIcon from '../../../assets/images/pokeball.svg.js';
 
 /**
  * Replace dashes by spaces.
@@ -13,10 +11,17 @@ import 'chi-wc/chi-icon.js';
  */
 const dashesToSpaces = name => name.replace(/-/g, ' ');
 
-export class PokemonCard extends LocalizeMixin(LitElement) {
+export class PokemonCard extends ScopedElementsMixin(LocalizeMixin(LitElement)) {
   /** @override */
   static get styles() {
     return [super.style || [], pokemonCardStyle];
+  }
+
+  /** @override */
+  static get scopedElements() {
+    return {
+      'chi-icon': ChiIcon,
+    };
   }
 
   /** @override */
