@@ -1,5 +1,17 @@
 # @pokeapp/feat-list-pokemons
 
+## 0.5.0
+
+### Minor Changes
+
+- 248a2d9: add scoped-elements
+
+### Patch Changes
+
+- 3198bf4: upgrade dependencies
+- Updated dependencies [3198bf4]
+  - @pokeapp/common@0.4.1
+
 ## 0.4.2
 
 ### Patch Changes
