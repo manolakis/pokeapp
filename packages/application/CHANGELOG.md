@@ -1,5 +1,13 @@
 # @pokeapp/app
 
+## 0.4.2
+
+### Patch Changes
+
+- Updated dependencies [3de0901]
+  - @pokeapp/common@0.4.0
+  - @pokeapp/feat-list-pokemons@0.4.2
+
 ## 0.4.1
 
 ### Patch Changes

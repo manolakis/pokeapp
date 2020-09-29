@@ -1,5 +1,11 @@
 # @pokeapp/common
 
+## 0.4.0
+
+### Minor Changes
+
+- 3de0901: add more details to the Pokemon type
+
 ## 0.3.0
 
 ### Minor Changes
