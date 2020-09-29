@@ -34,20 +34,71 @@ export class PokeAPIProvider {
   }
 
   /**
-   * Returns a Pokemon details
+   * Obtains the Pokemon details.
+   *
    * @param {string} name
-   * @return {Promise<{name: string, sprite: string}>}
+   * @return {Promise<{
+   *   id: number,
+   *   name: string,
+   *   height: number,
+   *   weight: number,
+   *   sprite: string,
+   *   stats: {
+   *     hp: number,
+   *     attack: number,
+   *     defense: number,
+   *     'special-attack': number,
+   *     'special-defense': number,
+   *     speed: number,
+   *   }
+   * }>}
    */
   async getPokemon(name) {
     /** @type {PokemonAPI}  */
-    const data = await this.__provider.request({
+    const { id, height, weight, stats, sprites } = await this.__provider.request({
       method: 'get',
       url: `/pokemon/${name}`,
     });
 
     return {
-      name: data.name,
-      sprite: data.sprites.other?.dream_world?.front_default || data.sprites.front_default,
+      id,
+      name,
+      height,
+      weight,
+      sprite: sprites.other?.dream_world?.front_default || sprites.front_default,
+      stats: stats.reduce((acc, { base_stat: value, stat: { name: key } }) => {
+        acc[key] = value;
+
+        return acc;
+      }, {}),
+    };
+  }
+
+  /**
+   * Obtains the Pokemon details.
+   *
+   * @param name
+   * @return {Promise<{
+   *   name: string,
+   *   weight: number,
+   *   id: number,
+   *   height: number,
+   * }>}
+   */
+  async getPokemonDetails(name) {
+    /** @type {PokemonAPI}  */
+    const { id, height, weight, stats } = await this._getPokemon(name);
+
+    return {
+      id,
+      name,
+      height,
+      weight,
+      stats: stats.reduce((acc, { base_stat: value, stat: { name: key } }) => {
+        acc[key] = value;
+
+        return acc;
+      }, {}),
     };
   }
 }
