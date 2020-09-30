@@ -1,5 +1,14 @@
 # @pokeapp/feat-list-pokemons
 
+## 0.5.1
+
+### Patch Changes
+
+- 9cb2903: Update translations
+- b7d8afd: Update chi-wc dependency
+- Updated dependencies [b7d8afd]
+  - @pokeapp/common@0.4.2
+
 ## 0.5.0
 
 ### Minor Changes

@@ -1,5 +1,22 @@
 # @pokeapp/app
 
+## 0.6.0
+
+### Minor Changes
+
+- b7d8afd: Connect feat-localization-selector
+
+### Patch Changes
+
+- b7d8afd: Update chi-wc dependency
+- 58b93be: Fix translations import
+- Updated dependencies [b657df2]
+- Updated dependencies [9cb2903]
+- Updated dependencies [b7d8afd]
+  - @pokeapp/feat-pokemon-details@0.2.2
+  - @pokeapp/feat-list-pokemons@0.5.1
+  - @pokeapp/common@0.4.2
+
 ## 0.5.1
 
 ### Patch Changes

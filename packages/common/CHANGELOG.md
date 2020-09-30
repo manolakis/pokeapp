@@ -1,5 +1,11 @@
 # @pokeapp/common
 
+## 0.4.2
+
+### Patch Changes
+
+- b7d8afd: Update chi-wc dependency
+
 ## 0.4.1
 
 ### Patch Changes
