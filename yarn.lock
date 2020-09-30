@@ -2685,7 +2685,7 @@
     open "^7.1.0"
     portfinder "^1.0.27"
 
-"@web/dev-server-core@^0.2.10", "@web/dev-server-core@^0.2.6", "@web/dev-server-core@^0.2.9":
+"@web/dev-server-core@^0.2.10", "@web/dev-server-core@^0.2.2", "@web/dev-server-core@^0.2.6", "@web/dev-server-core@^0.2.9":
   version "0.2.10"
   resolved "https://registry.yarnpkg.com/@web/dev-server-core/-/dev-server-core-0.2.10.tgz#af769b0a3a3c81164193f3a936e17fc02947b4e4"
   integrity sha512-W78G7+oNp2Z8ECsdsiTAWCzS9qm5Hhl2fdf9xGOGG4zJAVT8XHqvQG0FCDqvRlQhcuA5RoQbTgCROlsA1TllwA==
@@ -2706,7 +2706,7 @@
     picomatch "^2.2.2"
     ws "^7.3.1"
 
-"@web/dev-server-core@^0.2.2", "@web/dev-server-core@^0.2.5":
+"@web/dev-server-core@^0.2.5":
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/@web/dev-server-core/-/dev-server-core-0.2.9.tgz#bf142fa3c09c52a31a9d9e5991128724887de3c2"
   integrity sha512-adTAOZ/yQQpOX42sKfj52SQl4lQDdvQSc9Wk3FkL26dMboX4bof/J0DKbpUT3jXrpu6BnogpQosgLUAvDSXcwg==
@@ -2828,10 +2828,10 @@
   dependencies:
     "@web/test-runner-core" "^0.7.13"
 
-"@web/test-runner-core@^0.7.13", "@web/test-runner-core@^0.7.19", "@web/test-runner-core@^0.7.4":
-  version "0.7.19"
-  resolved "https://registry.yarnpkg.com/@web/test-runner-core/-/test-runner-core-0.7.19.tgz#6eaffbef89588b361a1941a136fd78f9cf64a4ae"
-  integrity sha512-DLgBm3lLnX5O3ax5boMvna+0E4fQcvmtvI2PtF7huVgC8Ob3iPzVEOL8tEsUFRGYME5XyjUYezIDp6hSmhiLug==
+"@web/test-runner-core@^0.7.13", "@web/test-runner-core@^0.7.19", "@web/test-runner-core@^0.7.20", "@web/test-runner-core@^0.7.4":
+  version "0.7.20"
+  resolved "https://registry.yarnpkg.com/@web/test-runner-core/-/test-runner-core-0.7.20.tgz#d41790a9b2f9c326ea4806e6d773f261fa4d868f"
+  integrity sha512-I505dCwsFr0l6pAezqZmFDNovZj7OFNDbEcVA0DIIqW5kFwXkBR0DGgrIxfCWzvJh8FUYTtY4GQmVmqB+1rteQ==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@web/browser-logs" "^0.1.3"
@@ -2869,30 +2869,30 @@
     "@web/test-runner-coverage-v8" "^0.1.2"
     playwright "^1.3.0"
 
-"@web/test-runner-saucelabs@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@web/test-runner-saucelabs/-/test-runner-saucelabs-0.0.6.tgz#407fb45c4887b81b6e30f81c2848b174fc917d63"
-  integrity sha512-I9uECJEqkBxFDkVYhklcKFxTsoutM9MJkbFdr0B/+PNMRbYhmj88MxbX6NhMmEgJOg4rxCEZicGm9Zw+YHjTsw==
+"@web/test-runner-saucelabs@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@web/test-runner-saucelabs/-/test-runner-saucelabs-0.0.7.tgz#231fb3db8eff47ae02aefa709634a884ffcf14da"
+  integrity sha512-6wm3eiTENU63HyTnPiFYfid3NMJ3MNdm14iG0YEohvd8AfEnSMLYrbFrIcPV+0N5EQWyH7qB1/eYoKQgNZKI6w==
   dependencies:
     "@web/dev-server-esbuild" "^0.2.4"
-    "@web/test-runner-selenium" "^0.2.7"
+    "@web/test-runner-selenium" "^0.2.8"
     ip "^1.1.5"
     saucelabs "^4.5.0"
     selenium-webdriver "^4.0.0-alpha.7"
     uuid "^8.3.0"
 
-"@web/test-runner-selenium@^0.2.7":
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/@web/test-runner-selenium/-/test-runner-selenium-0.2.7.tgz#7b3fb5275d90a43e8dfa5fea8dd87f7a7670a30e"
-  integrity sha512-N8kNLXaXYj2VD4O0r1MTSX4dEkUtf1rIgGMugIHurHRC4WJfSu2mRgfCjdaOoKxSmX/mSytU1PnV3g0wLXZQmA==
+"@web/test-runner-selenium@^0.2.8":
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/@web/test-runner-selenium/-/test-runner-selenium-0.2.8.tgz#dee19b8e0fd143ec33c1430bcea4c4ea5b0d1bf3"
+  integrity sha512-X9fs86PvSeAFjhVfDl9kSMd7ZaIu0AIGOLsdn+VlUhBJNRCk9Ti0xh4C3eXHeqM8vUwpF/yYt9q9FwUC3WHzrA==
   dependencies:
     "@web/test-runner-core" "^0.7.19"
     selenium-webdriver "^4.0.0-alpha.7"
 
 "@web/test-runner@^0.7.24":
-  version "0.7.34"
-  resolved "https://registry.yarnpkg.com/@web/test-runner/-/test-runner-0.7.34.tgz#590aa1c6e4723e779caca92bff532933530cbee0"
-  integrity sha512-kFwdb71X2Ss/cH0jNwfUESS6gvUs1ztyXDanqtAzvDvfgCGwQ0Km4exkgU+8eoG5lBs1BC5GJEv0OmG8//PUqA==
+  version "0.7.36"
+  resolved "https://registry.yarnpkg.com/@web/test-runner/-/test-runner-0.7.36.tgz#64c9e86036c1f6cefb93950e73d1cb51c1a79fdc"
+  integrity sha512-occnDes/l0RkcDUkcTvZeUGyB8z5CWfCW1zRWQPlbNGQ6Axih6M7YalohejLHhhjMwSD+J40G2OWC9PYneFvMw==
   dependencies:
     "@rollup/plugin-node-resolve" "^8.1.0"
     "@web/config-loader" "^0.1.2"
@@ -2900,9 +2900,9 @@
     "@web/test-runner-chrome" "^0.6.8"
     "@web/test-runner-cli" "^0.5.16"
     "@web/test-runner-commands" "^0.1.5"
-    "@web/test-runner-core" "^0.7.19"
+    "@web/test-runner-core" "^0.7.20"
     "@web/test-runner-mocha" "^0.3.3"
-    "@web/test-runner-saucelabs" "^0.0.6"
+    "@web/test-runner-saucelabs" "^0.0.7"
     command-line-args "^5.1.1"
     deepmerge "^4.2.2"
     globby "^11.0.1"
@@ -3881,10 +3881,10 @@ checkstyle-formatter@^1.1.0:
   dependencies:
     xml-escape "^1.0.0"
 
-chi-wc@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/chi-wc/-/chi-wc-0.8.0.tgz#31107ce397bcc0d810d91c883a06970029119166"
-  integrity sha512-wCupifFTOvtPpGEl4W2JsRB8wRXHp8RQGSfmbu1XmN9foTu2mRX2pcSqYqQq/CjG1j1wjiW0Y3vWaPvq9Ed3bQ==
+chi-wc@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/chi-wc/-/chi-wc-0.9.0.tgz#504dfa7129a2bdf8be27fd770dbb1c61d197674c"
+  integrity sha512-8sDugQtxWCdMXpzUmUIpbRwg7H4bg22uRAVsZKF/M2+XcDGIcgH4yrOq6GAr1fo9UsHj2VGji4eeF0Hk8nXOBQ==
   dependencies:
     "@lion/button" "^0.7.13"
     "@lion/core" "^0.12.0"
@@ -10044,9 +10044,9 @@ sinon-chai@^3.3.0:
   integrity sha512-IifbusYiQBpUxxFJkR3wTU68xzBN0+bxCScEaKMjBvAQERg6FnTTc1F17rseLb1tjmkJ23730AXpFI0c47FgAg==
 
 sinon@^9.0.3:
-  version "9.0.3"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-9.0.3.tgz#bffc3ec28c936332cd2a41833547b9eed201ecff"
-  integrity sha512-IKo9MIM111+smz9JGwLmw5U1075n1YXeAq8YeSFlndCLhAL5KGn6bLgu7b/4AYHTV/LcEMcRm2wU2YiL55/6Pg==
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-9.1.0.tgz#4afc90707c8e360fe051398eed2d3b197980ffc3"
+  integrity sha512-9zQShgaeylYH6qtsnNXlTvv0FGTTckuDfHBi+qhgj5PvW2r2WslHZpgc3uy3e/ZAoPkqaOASPi+juU6EdYRYxA==
   dependencies:
     "@sinonjs/commons" "^1.7.2"
     "@sinonjs/fake-timers" "^6.0.1"
