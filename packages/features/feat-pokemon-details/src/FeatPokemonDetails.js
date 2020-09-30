@@ -82,6 +82,6 @@ export class FeatPokemonDetails extends ScopedElementsMixin(LocalizeMixin(LitEle
 
   /** @override */
   render() {
-    return html`${until(this.renderPokemonDetails(), html`loading...`)}`;
+    return html`${until(this.renderPokemonDetails(), this.msgLit(`${namespace}:loading`))}`;
   }
 }

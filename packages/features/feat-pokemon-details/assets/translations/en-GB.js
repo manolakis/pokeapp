@@ -1,4 +1,5 @@
 export default {
+  loading: 'Loading...',
   pokemonStats: {
     hp: 'hit points',
     attack: 'attack',
