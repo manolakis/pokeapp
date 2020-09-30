@@ -1,4 +1,5 @@
 export default {
+  loading: 'Cargando...',
   imageAlt: 'Imagen de {name}',
   search: {
     label: 'Buscar',
