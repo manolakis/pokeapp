@@ -1,5 +1,14 @@
 # @pokeapp/feat-pokemon-details
 
+## 0.2.2
+
+### Patch Changes
+
+- b657df2: Update translations
+- b7d8afd: Update chi-wc dependency
+- Updated dependencies [b7d8afd]
+  - @pokeapp/common@0.4.2
+
 ## 0.2.1
 
 ### Patch Changes
