@@ -1,15 +1,15 @@
 {
-  "name": "@pokeapp/feat-pokemon-details",
+  "name": "@pokeapp/feat-localize-selector",
   "description": "Pokemon Sample Application - Feat Pokemon details",
   "license": "MIT",
-  "version": "0.2.1",
-  "author": "Manuel Martin <manuel.martin@gmail.com>",
+  "version": "0.0.0",
+  "author": "Marcos Gil <marcos90gil@gmail.com>",
   "main": "index.js",
   "module": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/manolakis/pokeapp.git",
-    "directory": "packages/features/feat-pokemon-details"
+    "directory": "packages/features/feat-localize-selector"
   },
   "files": [
     "*.js",

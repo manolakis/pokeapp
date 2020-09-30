@@ -102,7 +102,7 @@ export class PokemonCard extends ScopedElementsMixin(LocalizeMixin(LitElement)) 
   /** @override */
   render() {
     return html`
-      <div class="image">${until(this.renderImage(), html` Loading... `)}</div>
+      <div class="image">${until(this.renderImage(), this.msgLit(`${namespace}:loading`))}</div>
       <div class="name">${dashesToSpaces(this.name)}</div>
     `;
   }
