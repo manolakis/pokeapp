@@ -33,9 +33,9 @@ export class PokeApp extends ScopedElementsMixin(LocalizeMixin(LitElement)) {
         [namespace]: locale => {
           switch (locale) {
             case 'es-ES':
-              return import(`../assets/translations/es-ES.js`);
+              return import('../assets/translations/es-ES.js');
             default:
-              return import(`../assets/translations/en-GB.js`);
+              return import('../assets/translations/en-GB.js');
           }
         },
       },
