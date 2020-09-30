@@ -8,5 +8,10 @@ export const featLocalizationSelectorStyle = [
     :host {
       display: block;
     }
+
+    .flag {
+      --color-background-base: #fff;
+      --font-size-base: 1rem;
+    }
   `,
 ];
