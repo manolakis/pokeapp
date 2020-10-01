@@ -1,6 +1,6 @@
 {
-  "name": "@pokeapp/feat-localize-selector",
-  "description": "Pokemon Sample Application - Feat Pokemon details",
+  "name": "@pokeapp/feat-locale-selector",
+  "description": "Pokemon Sample Application - Feat Locale Selector",
   "license": "MIT",
   "version": "0.1.0",
   "author": "Marcos Gil <marcos90gil@gmail.com>",
@@ -9,7 +9,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/manolakis/pokeapp.git",
-    "directory": "packages/features/feat-localize-selector"
+    "directory": "packages/features/feat-locale-selector"
   },
   "files": [
     "*.js",

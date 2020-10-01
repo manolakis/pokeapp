@@ -1,8 +1,8 @@
-import { css } from 'chi-wc';
+import { css, rem } from 'chi-wc';
 import { boxSizingStyle } from '@pokeapp/common';
 
 // language=CSS
-export const featLocalizationSelectorStyle = [
+export const featLocaleSelectorStyle = [
   boxSizingStyle,
   css`
     :host {
@@ -11,7 +11,7 @@ export const featLocalizationSelectorStyle = [
 
     .flag {
       --color-background-base: #fff;
-      --font-size-base: 1rem;
+      --font-size-base: ${rem[22]};
     }
   `,
 ];
