@@ -1,11 +1,11 @@
 import { LitElement, ScopedElementsMixin, LocalizeMixin, html, ChiHeader, ChiIcon } from 'chi-wc';
+import { FeatLocaleSelector } from '@pokeapp/feat-locale-selector';
 import { Router } from '@vaadin/router';
 
 import logo from '../assets/images/pokeapp.svg.js';
 import { NavigationEvent } from './events/NavigationEvent.js';
 import { pokeAppStyle } from './PokeApp.style.js';
 import { NavigateToPokemonDetailsEvent } from './events/NavigateToPokemonDetailsEvent.js';
-import { FeatLocalizationSelector } from '../../features/feat-localization-selector/src/FeatLocalizationSelector.js';
 
 /** i18n namespace */
 const namespace = 'pokeapp';
@@ -21,7 +21,7 @@ export class PokeApp extends ScopedElementsMixin(LocalizeMixin(LitElement)) {
     return {
       'chi-header': ChiHeader,
       'chi-icon': ChiIcon,
-      'feat-localization-selector': FeatLocalizationSelector,
+      'feat-locale-selector': FeatLocaleSelector,
     };
   }
 
@@ -135,7 +135,7 @@ export class PokeApp extends ScopedElementsMixin(LocalizeMixin(LitElement)) {
       <div class="pokeapp__container">
         <chi-header class="pokeapp__header">
           <chi-icon slot="header-brand-logo" class="logo" .svg="${logo}"></chi-icon>
-          <feat-localization-selector slot="header-right"></feat-localization-selector>
+          <feat-locale-selector slot="header-right"></feat-locale-selector>
         </chi-header>
         <section class="pokeapp__content"></section>
       </div>
