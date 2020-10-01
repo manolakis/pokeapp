@@ -2,7 +2,7 @@
   "name": "@pokeapp/feat-locale-selector",
   "description": "Pokemon Sample Application - Feat Locale Selector",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Marcos Gil <marcos90gil@gmail.com>",
   "main": "index.js",
   "module": "index.js",
