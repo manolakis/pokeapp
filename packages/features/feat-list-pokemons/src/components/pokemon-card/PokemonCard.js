@@ -53,14 +53,6 @@ export class PokemonCard extends ScopedElementsMixin(LocalizeMixin(LitElement)) 
     if (super.connectedCallback) {
       super.connectedCallback();
     }
-
-    if (!this.hasAttribute('tabindex')) {
-      this.setAttribute('tabIndex', 0);
-    }
-
-    if (!this.hasAttribute('role')) {
-      this.setAttribute('role', 'button');
-    }
   }
 
   /** @override */
@@ -102,8 +94,10 @@ export class PokemonCard extends ScopedElementsMixin(LocalizeMixin(LitElement)) 
   /** @override */
   render() {
     return html`
-      <div class="image">${until(this.renderImage(), this.msgLit(`${namespace}:loading`))}</div>
-      <div class="name">${dashesToSpaces(this.name)}</div>
+      <button class="button">
+        <div class="image">${until(this.renderImage(), this.msgLit(`${namespace}:loading`))}</div>
+        <div class="name">${dashesToSpaces(this.name)}</div>
+      </button>
     `;
   }
 }

@@ -1,6 +1,7 @@
 import { css, rem } from 'chi-wc';
 import { boxSizingStyle } from '@pokeapp/common';
 import {
+  tokenColorBackgroundBase,
   tokenColorBackgroundBaseDark,
   tokenColorBorderBase,
 } from 'chi-wc/packages/foundations/tokens/color';
@@ -10,7 +11,7 @@ import { tokenBorderRadiusBase } from 'chi-wc/packages/foundations/tokens/border
 export const pokemonCardStyle = [
   boxSizingStyle,
   css`
-    :host {
+    .button {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -20,9 +21,11 @@ export const pokemonCardStyle = [
       overflow: hidden;
       border: ${rem[1]} solid ${tokenColorBorderBase};
       border-radius: ${tokenBorderRadiusBase};
+      padding: 0;
+      background-color: ${tokenColorBackgroundBase};
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
     }
-    :host(:hover) {
+    .button:hover {
       cursor: pointer;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
     }

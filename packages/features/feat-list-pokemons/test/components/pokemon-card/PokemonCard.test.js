@@ -69,22 +69,4 @@ describe('PokemonCard', () => {
 
     expect(notFoundIcon).to.not.be.null;
   });
-
-  it('should have the tabindex="0', async () => {
-    const pokemonProvider = getPokemonProvider();
-    sandbox.stub(pokemonProvider, 'getPokemon').returns(pikachuData);
-
-    const $el = await scopedFixture(html` <pokemon-card name="pikachu"></pokemon-card> `);
-
-    expect($el.getAttribute('role')).to.be.equal('button');
-  });
-
-  it('should have the role="button', async () => {
-    const pokemonProvider = getPokemonProvider();
-    sandbox.stub(pokemonProvider, 'getPokemon').returns(pikachuData);
-
-    const $el = await scopedFixture(html` <pokemon-card name="pikachu"></pokemon-card> `);
-
-    expect($el.getAttribute('role')).to.be.equal('button');
-  });
 });
