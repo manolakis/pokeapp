@@ -1,5 +1,16 @@
 # @pokeapp/app
 
+## 0.7.0
+
+### Minor Changes
+
+- d224671: add back button
+
+### Patch Changes
+
+- Updated dependencies [7059e9a]
+  - @pokeapp/feat-list-pokemons@0.5.2
+
 ## 0.6.0
 
 ### Minor Changes

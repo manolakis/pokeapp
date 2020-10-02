@@ -1,5 +1,11 @@
 # @pokeapp/feat-list-pokemons
 
+## 0.5.2
+
+### Patch Changes
+
+- 7059e9a: fix keyboard navigation with Pokemon Card
+
 ## 0.5.1
 
 ### Patch Changes
