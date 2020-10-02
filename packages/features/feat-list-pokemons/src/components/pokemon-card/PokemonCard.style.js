@@ -53,7 +53,7 @@ export const pokemonCardStyle = [
       padding: ${rem[8]};
       height: 40%;
       min-height: 40%;
-      width: 100%;
+      width: 140px;
       display: flex;
       align-items: center;
       justify-content: center;
