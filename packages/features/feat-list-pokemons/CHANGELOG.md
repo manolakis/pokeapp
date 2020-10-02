@@ -1,5 +1,11 @@
 # @pokeapp/feat-list-pokemons
 
+## 0.5.3
+
+### Patch Changes
+
+- 241daf5: fix card style in Samsung Internet
+
 ## 0.5.2
 
 ### Patch Changes
