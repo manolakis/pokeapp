@@ -5,10 +5,7 @@ import { Router } from '@vaadin/router';
 import logo from '../assets/images/pokeapp.svg.js';
 import { NavigationEvent } from './events/NavigationEvent.js';
 import { pokeAppStyle } from './PokeApp.style.js';
-import { NavigateToPokemonDetailsEvent } from './events/NavigateToPokemonDetailsEvent.js';
-
-/** i18n namespace */
-const namespace = 'pokeapp';
+import { namespace } from './namespace.js';
 
 export class PokeApp extends ScopedElementsMixin(LocalizeMixin(LitElement)) {
   /** @override */
@@ -96,20 +93,14 @@ export class PokeApp extends ScopedElementsMixin(LocalizeMixin(LitElement)) {
    * @param {typeof NavigationEvent} event
    * @private
    */
-  _handleNavigationEvent(event) {
+  _handleNavigationEvent({ details: { url, params } }) {
     if (this.router) {
-      if (event instanceof NavigateToPokemonDetailsEvent) {
-        this.__setRoute(
-          this.router.urlForName('pokeapp-pokemon-details', {
-            name: event.pokemonName,
-          }),
-        );
-      }
+      this.__setRoute(this.router.urlForName(url, params));
     }
   }
 
   /**
-   * Changes the windoe location.
+   * Changes the route.
    *
    * @param {string} newLocation
    * @private

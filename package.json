@@ -64,7 +64,7 @@
     "lint:markdownlint": "git ls-files '*.md' | xargs markdownlint --ignore '{.changeset/*.md,**/CHANGELOG.md}'",
     "lint:prettier": "prettier \"**/*.js\" --list-different || (echo '↑↑ these files are not prettier formatted ↑↑' && exit 1)",
     "release": "changeset publish",
-    "start": "wds --node-resolve --app-index index.html --open",
+    "start": "wds --node-resolve --app-index index.html --root-dir . --open",
     "start:build": "npm run build && web-dev-server --root-dir dist --app-index index.html --compatibility none --open",
     "storybook": "start-storybook -p 9001 -s ./dev-assets",
     "storybook:build": "NODE_OPTIONS='--max-old-space-size=8192' build-storybook",

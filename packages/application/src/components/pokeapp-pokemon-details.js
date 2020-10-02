@@ -1,3 +1,3 @@
-import { PokeAppPokemonDetails } from './PokeAppPokemonsDetails.js';
+import { PokeAppPokemonDetails } from './PokeAppPokemonDetails.js';
 
 customElements.define('pokeapp-pokemon-details', PokeAppPokemonDetails);

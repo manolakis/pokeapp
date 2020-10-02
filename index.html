@@ -6,7 +6,7 @@
   <base href="/">
   <meta name="Pokemon application">
   <meta name="viewport"
-        content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+        content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -22,11 +22,33 @@
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="stylesheet" href="pokeapp.css">
 
   <meta name="msapplication-TileColor" content="#ef5350">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ef5350">
+
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Inter', Arial, Helvetica, Verdana, sans-serif;
+      min-height: 100%;
+      position: relative;
+    }
+
+    pokemon-app {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
 
 </head>
 <body>
