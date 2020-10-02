@@ -6,8 +6,8 @@ export class NavigateToPokemonDetailsEvent extends NavigationEvent {
    * @param {string} pokemonName
    */
   constructor(pokemonName) {
-    super();
-
-    this.pokemonName = pokemonName;
+    super('pokeapp-pokemon-details', {
+      name: pokemonName,
+    });
   }
 }

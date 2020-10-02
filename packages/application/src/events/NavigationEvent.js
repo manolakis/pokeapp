@@ -10,10 +10,15 @@ export class NavigationEvent extends CustomEvent {
   }
 
   /** Creates an event instance. */
-  constructor() {
+  constructor(url, params) {
     super(NavigationEvent.eventName, {
       bubbles: true,
       composed: true,
     });
+
+    this.details = {
+      url,
+      params,
+    };
   }
 }
