@@ -2,7 +2,7 @@
   "name": "@pokeapp/feat-list-pokemons",
   "description": "Pokemon Sample Application - Feat List Pokemons",
   "license": "MIT",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "author": "Manuel Martin <manuel.martin@gmail.com>",
   "main": "index.js",
   "module": "index.js",
