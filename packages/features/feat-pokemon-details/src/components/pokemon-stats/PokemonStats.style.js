@@ -1,6 +1,7 @@
-import { css, rem } from 'chi-wc';
+import { css } from 'chi-wc/core';
+import { rem } from 'chi-wc/style';
 import { boxSizingStyle } from '@pokeapp/common';
-import { tokenColorBackgroundBaseDark } from 'chi-wc/packages/foundations/tokens/color';
+import { tokenColorBackgroundBaseDark } from 'chi-wc/foundations';
 
 // language=CSS
 export const pokemonStatsStyle = [

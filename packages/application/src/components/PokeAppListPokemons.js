@@ -1,4 +1,4 @@
-import { LitElement, ScopedElementsMixin, html } from 'chi-wc';
+import { LitElement, ScopedElementsMixin, html } from 'chi-wc/core';
 import { FeatListPokemons } from '@pokeapp/feat-list-pokemons';
 import { NavigateToPokemonDetailsEvent } from '../events/NavigateToPokemonDetailsEvent.js';
 
@@ -22,8 +22,10 @@ export class PokeAppListPokemons extends ScopedElementsMixin(LitElement) {
 
   /** @override */
   render() {
-    return html`<feat-list-pokemons
-      @pokemon-selected="${event => this._handlePokemonSelected(event)}"
-    ></feat-list-pokemons>`;
+    return html`
+      <feat-list-pokemons
+        @pokemon-selected="${event => this._handlePokemonSelected(event)}"
+      ></feat-list-pokemons>
+    `;
   }
 }

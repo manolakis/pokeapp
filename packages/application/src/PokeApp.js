@@ -1,4 +1,7 @@
-import { LitElement, ScopedElementsMixin, LocalizeMixin, html, ChiHeader, ChiIcon } from 'chi-wc';
+import { LitElement, ScopedElementsMixin, html } from 'chi-wc/core';
+import { LocalizeMixin } from 'chi-wc/localize';
+import { ChiHeader } from 'chi-wc/header';
+import { ChiIcon } from 'chi-wc/icon';
 import { FeatLocaleSelector } from '@pokeapp/feat-locale-selector';
 import { Router } from '@vaadin/router';
 

@@ -10,11 +10,10 @@ import { NavigateToPokemonDetailsEvent } from '../src/events/NavigateToPokemonDe
  * @param {TemplateResult} template
  * @return {Promise<PokeApp>}
  */
-const scopedFixture = async template => {
-  return fixture(template, {
+const scopedFixture = async template =>
+  fixture(template, {
     scopedElements: { 'pokemon-app': PokeApp },
   });
-};
 
 describe('PokeApp', () => {
   let sandbox;
@@ -30,7 +29,7 @@ describe('PokeApp', () => {
   it('should be accessible', async () => {
     const $el = await scopedFixture(html` <pokemon-app></pokemon-app> `);
 
-    expect($el).to.be.accessible();
+    await expect($el).to.be.accessible();
   });
 
   it('should setup the router on firstUpdated', async () => {

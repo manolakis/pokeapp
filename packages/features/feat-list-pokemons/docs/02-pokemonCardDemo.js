@@ -1,4 +1,4 @@
-import { css, html } from 'chi-wc';
+import { css, html } from 'chi-wc/core';
 import { PokemonCard } from '../src/components/pokemon-card/PokemonCard.js';
 import { addStylesToDocumentHeader } from '../../../helpers/addStylesToDocumentHeader.js';
 

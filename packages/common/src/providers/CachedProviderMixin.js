@@ -1,4 +1,4 @@
-import { dedupeMixin } from 'chi-wc';
+import { dedupeMixin } from 'chi-wc/core';
 
 /**
  * @typedef {import('../../types/CachedProviderMixinTypes').CachedProviderMixin} CachedProviderMixin

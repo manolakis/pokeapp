@@ -1,11 +1,12 @@
-import { css, rem } from 'chi-wc';
+import { css } from 'chi-wc/core';
+import { rem } from 'chi-wc/style';
 import { boxSizingStyle } from '@pokeapp/common';
 import {
   tokenColorBackgroundBase,
   tokenColorBackgroundBaseDark,
   tokenColorBorderBase,
-} from 'chi-wc/packages/foundations/tokens/color';
-import { tokenBorderRadiusBase } from 'chi-wc/packages/foundations/tokens/border-radius';
+  tokenBorderRadiusBase,
+} from 'chi-wc/foundations';
 
 // language=CSS
 export const pokemonCardStyle = [

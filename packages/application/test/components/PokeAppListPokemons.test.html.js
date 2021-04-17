@@ -10,11 +10,10 @@ import { NavigateToPokemonDetailsEvent } from '../../src/events/NavigateToPokemo
  * @param {TemplateResult} template
  * @return {Promise<PokeAppListPokemons>}
  */
-const scopedFixture = async template => {
-  return fixture(template, {
+const scopedFixture = async template =>
+  fixture(template, {
     scopedElements: { 'pokeapp-list-pokemons': PokeAppListPokemons },
   });
-};
 
 describe('PokeAppListPokemons', () => {
   let sandbox;

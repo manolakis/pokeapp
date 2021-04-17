@@ -1,4 +1,4 @@
-import { html } from 'chi-wc';
+import { html } from 'chi-wc/core';
 import { PokemonStats } from '../src/components/pokemon-stats/PokemonStats.js';
 
 if (!customElements.get('pokemon-stats')) {

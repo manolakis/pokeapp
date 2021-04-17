@@ -1,4 +1,6 @@
-import { html, LitElement, LocalizeMixin, localize, ScopedElementsMixin, ChiButton } from 'chi-wc';
+import { html, LitElement, ScopedElementsMixin } from 'chi-wc/core';
+import { LocalizeMixin, localize } from 'chi-wc/localize';
+import { ChiButton } from 'chi-wc/button';
 
 import { featLocaleSelectorStyle } from './FeatLocaleSelector.style.js';
 import { namespace } from './namespace.js';
@@ -61,14 +63,16 @@ export class FeatLocaleSelector extends ScopedElementsMixin(LocalizeMixin(LitEle
     const currentLang = localize.locale;
     const alternativeFlag = this.langs.find(lang => lang !== currentLang);
 
-    return html`<chi-button
-      aria-label="${this.msgLit(`${namespace}:label`, {
-        lang: this.msgLit(`${namespace}:locales.${alternativeFlag}`),
-      })}"
-      class="flag"
-      data-lang="${alternativeFlag}"
-      @click=${() => this._handleClickOnFlag(alternativeFlag)}
-      >${flags[alternativeFlag]}</chi-button
-    >`;
+    return html`
+      <chi-button
+        aria-label="${this.msgLit(`${namespace}:label`, {
+          lang: this.msgLit(`${namespace}:locales.${alternativeFlag}`),
+        })}"
+        class="flag"
+        data-lang="${alternativeFlag}"
+        @click=${() => this._handleClickOnFlag(alternativeFlag)}
+        >${flags[alternativeFlag]}</chi-button
+      >
+    `;
   }
 }

@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import { getPokemonProvider } from '../src/providers/PokemonProvider.js';
 import { FeatPokemonDetails } from '../src/FeatPokemonDetails.js';
 
-/** @typedef {import('chi-wc').TemplateResult} TemplateResult */
+/** @typedef {import('chi-wc/core').TemplateResult} TemplateResult */
 /** @typedef {import('@pokeapp/common').Pokemon } Pokemon */
 
 /**

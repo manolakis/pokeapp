@@ -1,4 +1,4 @@
-import { html } from 'chi-wc';
+import { html } from 'chi-wc/core';
 import { FeatPokemonDetails } from '../src/FeatPokemonDetails.js';
 
 customElements.define('feat-pokemon-details', FeatPokemonDetails);

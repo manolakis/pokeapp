@@ -1,11 +1,11 @@
 import { expect, fixture, html } from '@open-wc/testing';
-import { localize } from 'chi-wc';
+import { localize } from 'chi-wc/localize';
 import sinon from 'sinon';
 
 import { FeatLocaleSelector } from '../src/FeatLocaleSelector.js';
 import flags from '../assets/translations/flags.js';
 
-/** @typedef {import('chi-wc').TemplateResult} TemplateResult */
+/** @typedef {import('chi-wc/core').TemplateResult} TemplateResult */
 
 /**
  * Creates a scoped fixture.
@@ -13,11 +13,10 @@ import flags from '../assets/translations/flags.js';
  * @param {TemplateResult} template
  * @return {Promise<FeatLocaleSelector>}
  */
-const scopedFixture = async template => {
-  return fixture(template, {
+const scopedFixture = async template =>
+  fixture(template, {
     scopedElements: { 'feat-locale-selector': FeatLocaleSelector },
   });
-};
 
 const [defaultLang] = Object.keys(flags);
 

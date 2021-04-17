@@ -1,3 +1,3 @@
-import { boxSizingGenerator } from 'chi-wc';
+import { boxSizingGenerator } from 'chi-wc/style';
 
 export const boxSizingStyle = boxSizingGenerator(':host', '*');

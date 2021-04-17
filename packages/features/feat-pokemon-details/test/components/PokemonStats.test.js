@@ -1,7 +1,7 @@
 import { expect, fixture, html } from '@open-wc/testing';
 import { PokemonStats } from '../../src/components/pokemon-stats/PokemonStats.js';
 
-/** @typedef {import('chi-wc').TemplateResult} TemplateResult */
+/** @typedef {import('chi-wc/core').TemplateResult} TemplateResult */
 /** @typedef {import('@pokeapp/common').PokemonStats } PokemonStats */
 
 /**
