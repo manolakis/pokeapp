@@ -1,5 +1,16 @@
 # @pokeapp/app
 
+## 0.7.1
+
+### Patch Changes
+
+- 6f4faad: use exported elements from chi-wc
+- Updated dependencies [6f4faad]
+  - @pokeapp/common@0.4.3
+  - @pokeapp/feat-list-pokemons@0.5.4
+  - @pokeapp/feat-locale-selector@0.1.1
+  - @pokeapp/feat-pokemon-details@0.2.3
+
 ## 0.7.0
 
 ### Minor Changes

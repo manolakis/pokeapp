@@ -1,6 +1,15 @@
 # @pokeapp/feat-localize-selector
 
+## 0.1.1
+
+### Patch Changes
+
+- 6f4faad: use exported elements from chi-wc
+- Updated dependencies [6f4faad]
+  - @pokeapp/common@0.4.3
+
 ## 0.1.0
+
 ### Minor Changes
 
 - 582eb87: Add localization feature
