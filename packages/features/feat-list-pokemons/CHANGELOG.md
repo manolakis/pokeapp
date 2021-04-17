@@ -1,5 +1,13 @@
 # @pokeapp/feat-list-pokemons
 
+## 0.5.4
+
+### Patch Changes
+
+- 6f4faad: use exported elements from chi-wc
+- Updated dependencies [6f4faad]
+  - @pokeapp/common@0.4.3
+
 ## 0.5.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @pokeapp/common
 
+## 0.4.3
+
+### Patch Changes
+
+- 6f4faad: use exported elements from chi-wc
+
 ## 0.4.2
 
 ### Patch Changes
