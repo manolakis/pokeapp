@@ -1,4 +1,5 @@
-import { LitElement, ScopedElementsMixin, LocalizeMixin, html, until } from 'chi-wc';
+import { LitElement, ScopedElementsMixin, html, until } from 'chi-wc/core';
+import { LocalizeMixin } from 'chi-wc/localize';
 
 import { featPokemonDetailsStyle } from './FeatPokemonDetails.style.js';
 import { namespace } from './namespace.js';
@@ -82,6 +83,6 @@ export class FeatPokemonDetails extends ScopedElementsMixin(LocalizeMixin(LitEle
 
   /** @override */
   render() {
-    return html`${until(this.renderPokemonDetails(), this.msgLit(`${namespace}:loading`))}`;
+    return html` ${until(this.renderPokemonDetails(), this.msgLit(`${namespace}:loading`))} `;
   }
 }

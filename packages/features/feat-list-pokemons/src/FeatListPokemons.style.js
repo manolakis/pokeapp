@@ -1,4 +1,5 @@
-import { css, rem, tabletPortraitGenerator } from 'chi-wc';
+import { css } from 'chi-wc/core';
+import { rem, tabletPortraitGenerator } from 'chi-wc/style';
 import { boxSizingStyle } from '@pokeapp/common';
 
 // language=CSS

@@ -1,4 +1,6 @@
-import { LitElement, ScopedElementsMixin, LocalizeMixin, html, until, ChiIcon } from 'chi-wc';
+import { LitElement, ScopedElementsMixin, html, until } from 'chi-wc/core';
+import { LocalizeMixin } from 'chi-wc/localize';
+import { ChiIcon } from 'chi-wc/icon';
 import { getPokemonAction } from '../../actions/getPokemonAction.js';
 import { pokemonCardStyle } from './PokemonCard.style.js';
 import { namespace } from '../../namespace.js';

@@ -1,8 +1,6 @@
-import { css, desktopGenerator } from 'chi-wc';
-import {
-  tokenColorBackgroundBase,
-  tokenColorBackgroundBaseDark,
-} from 'chi-wc/packages/foundations/tokens/color';
+import { css } from 'chi-wc/core';
+import { desktopGenerator } from 'chi-wc/style';
+import { tokenColorBackgroundBase, tokenColorBackgroundBaseDark } from 'chi-wc/foundations';
 import { boxSizingStyle } from '@pokeapp/common';
 
 // language=CSS
@@ -24,6 +22,7 @@ export const pokeAppStyle = [
       justify-content: start;
       background-color: ${tokenColorBackgroundBaseDark};
     }
+
     .pokeapp__header,
     .pokeapp__content {
       width: 100%;

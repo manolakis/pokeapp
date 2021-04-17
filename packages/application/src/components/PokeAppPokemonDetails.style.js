@@ -1,4 +1,4 @@
-import { css } from 'chi-wc';
+import { css } from 'chi-wc/core';
 import { boxSizingStyle } from '@pokeapp/common';
 
 // language=CSS

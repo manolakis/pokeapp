@@ -1,4 +1,4 @@
-import { html } from 'chi-wc';
+import { html } from 'chi-wc/core';
 import { FeatListPokemons } from '../src/FeatListPokemons.js';
 
 if (!customElements.get('feat-list-pokemons')) {

@@ -1,12 +1,7 @@
-import {
-  LitElement,
-  ScopedElementsMixin,
-  LocalizeMixin,
-  html,
-  nothing,
-  ChiButton,
-  ChiInput,
-} from 'chi-wc';
+import { LitElement, ScopedElementsMixin, html, nothing } from 'chi-wc/core';
+import { LocalizeMixin } from 'chi-wc/localize';
+import { ChiButton } from 'chi-wc/button';
+import { ChiInput } from 'chi-wc/input';
 
 import { featListPokemonStyle } from './FeatListPokemons.style.js';
 import { getPokemonNamesAction } from './actions/getPokemonNamesAction.js';

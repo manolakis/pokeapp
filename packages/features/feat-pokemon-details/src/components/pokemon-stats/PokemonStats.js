@@ -1,4 +1,5 @@
-import { html, LitElement, LocalizeMixin } from 'chi-wc';
+import { html, LitElement } from 'chi-wc/core';
+import { LocalizeMixin } from 'chi-wc/localize';
 
 import { namespace } from '../../namespace.js';
 import { pokemonStatsStyle } from './PokemonStats.style.js';

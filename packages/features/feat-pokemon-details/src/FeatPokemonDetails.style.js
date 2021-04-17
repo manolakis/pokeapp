@@ -1,7 +1,7 @@
-import { css, rem, tabletPortraitGenerator } from 'chi-wc';
+import { css } from 'chi-wc/core';
+import { rem, tabletPortraitGenerator } from 'chi-wc/style';
 import { boxSizingStyle } from '@pokeapp/common';
-import { tokenColorBackgroundBaseDark } from 'chi-wc/packages/foundations/tokens/color';
-import { tokenBorderRadiusBase } from 'chi-wc/packages/foundations/tokens/border-radius';
+import { tokenColorBackgroundBaseDark, tokenBorderRadiusBase } from 'chi-wc/foundations';
 
 // language=CSS
 export const featPokemonDetailsStyle = [

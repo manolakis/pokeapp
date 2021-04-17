@@ -1,4 +1,6 @@
-import { LitElement, ScopedElementsMixin, LocalizeMixin, html, ChiButton } from 'chi-wc';
+import { LitElement, ScopedElementsMixin, html } from 'chi-wc/core';
+import { LocalizeMixin } from 'chi-wc/localize';
+import { ChiButton } from 'chi-wc/button';
 import { FeatPokemonDetails } from '@pokeapp/feat-pokemon-details';
 import { NavigateToPokemonSearchEvent } from '../events/NavigateToPokemonSearchEvent.js';
 import { pokeAppPokemonDetailsStyle } from './PokeAppPokemonDetails.style.js';

@@ -1,4 +1,4 @@
-import { html, css } from 'chi-wc';
+import { html, css } from 'chi-wc/core';
 import { PokeApp } from '../src/PokeApp.js';
 import { addStylesToDocumentHeader } from '../../helpers/addStylesToDocumentHeader.js';
 
